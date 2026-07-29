@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tours & Packages | Uno Tours</title>
+
+<script src="https://kit.fontawesome.com/8782f58de9.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+
+<!-- ===== HEADER / NAV (same as home) ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="nav-wrap">
+    <a href="../index.html" class="logo">
+      <div class="logo-badge">
+        <svg viewBox="0 0 24 24" class="logo-icon"><img src="../images/WhatsApp Image 2026-07-07 at 12.04.15 PM.jpeg" alt=""></svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">UNO TOURS</span>
+        <span class="logo-tag">Travel. Explore. Live.</span>
+      </div>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="destination.html">Destination</a>
+      <a href="tours.html" class="active">Tours</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="nav-login">Login</a>
+      <a href="signup.html" class="nav-signup">Sign Up</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== TOURS HERO ===== -->
+<section class="hero hero--tall">
+  <div class="hero-media">
+    <!-- PLACEHOLDER: couple riding a jet ski on turquoise water, overwater villas in the distance -->
+    <img src="../images/PLACEHOLDER-tours-hero-jetski.jpg" alt="Couple riding a jet ski on turquoise water" class="hero-img">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <p class="page-eyebrow">Tours</p>
+    <h1 class="page-title">Curated Packages,<br>Unforgettable Experiences</h1>
+    <p class="page-sub">Handpicked packages for every traveler. Explore more, worry less — we will handle the rest.</p>
+  </div>
+</section>
+
+<!-- ===== TOURS SEARCH / FILTERS ===== -->
+<section class="tours-search-wrap">
+  <div>
+    <button type="button" class="tours-search-btn" id="toursSearchBtn">
+      <i class="fa-solid fa-magnifying-glass"></i> Search Packages
+    </button>
+
+    <div class="tours-filters">
+      <div class="tours-filter">
+        <i class="fa-solid fa-location-pin"></i>
+        <div><strong>Destination</strong><span>All Destinations</span></div>
+      </div>
+      <div class="tours-filter">
+        <i class="fa-solid fa-suitcase-rolling"></i>
+        <div><strong>Trip Type</strong><span>All Types</span></div>
+      </div>
+      <div class="tours-filter">
+        <i class="fa-regular fa-calendar"></i>
+        <div><strong>Duration</strong><span>Any Duration</span></div>
+      </div>
+      <div class="tours-filter">
+        <i class="fa-solid fa-wallet"></i>
+        <div><strong>Budget</strong><span>Any Budget</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PACKAGE GRID ===== -->
+<section class="tours-section">
+  <div class="tours-grid" id="toursGrid">
+    <article class="pkg-card tour-card">
+      <span class="tour-badge">5 Days / 4 Nights</span>
+      <!-- PLACEHOLDER: Santorini streets and blue-domed churches -->
+      <img src="../images/PLACEHOLDER-tour-greek-island.jpg" alt="Greek Island Escape">
+      <div class="pkg-info">
+        <h3>Greek Island Escape</h3>
+        <p class="pkg-nights">Stunning views and serene escape</p>
+        <p class="pkg-price">From <strong>$2000</strong> per person</p>
+      </div>
+      <div class="tour-includes">
+        <span><i class="fa-solid fa-plane"></i> flight</span>
+        <span><i class="fa-solid fa-hotel"></i> hotel</span>
+        <span><i class="fa-solid fa-suitcase-rolling"></i> tours</span>
+        <span><i class="fa-solid fa-utensils"></i> meals</span>
+      </div>
+      <button class="book-btn">Book Now</button>
+    </article>
+
+    <article class="pkg-card tour-card">
+      <span class="tour-badge">6 Days / 5 Nights</span>
+      <!-- PLACEHOLDER: Eiffel Tower and the Seine at sunset -->
+      <img src="../images/PLACEHOLDER-tour-paris-paradise.jpg" alt="Paris Paradise">
+      <div class="pkg-info">
+        <h3>Paris Paradise</h3>
+        <p class="pkg-nights">French luxury and iconic landmarks.</p>
+        <p class="pkg-price">From <strong>$3000</strong> per person</p>
+      </div>
+      <div class="tour-includes">
+        <span><i class="fa-solid fa-plane"></i> flight</span>
+        <span><i class="fa-solid fa-hotel"></i> hotel</span>
+        <span><i class="fa-solid fa-suitcase-rolling"></i> tours</span>
+        <span><i class="fa-solid fa-utensils"></i> meals</span>
+      </div>
+      <button class="book-btn">Book Now</button>
+    </article>
+
+    <article class="pkg-card tour-card">
+      <span class="tour-badge">4 Days / 3 Nights</span>
+      <!-- PLACEHOLDER: overwater bungalow walkway in the Maldives at dusk -->
+      <img src="../images/PLACEHOLDER-tour-maldives.jpg" alt="Cozy Maldives">
+      <div class="pkg-info">
+        <h3>Cozy Maldives</h3>
+        <p class="pkg-nights">Beaches, sunsets and adventure all in one</p>
+        <p class="pkg-price">From <strong>$2500</strong> per person</p>
+      </div>
+      <div class="tour-includes">
+        <span><i class="fa-solid fa-plane"></i> flight</span>
+        <span><i class="fa-solid fa-hotel"></i> hotel</span>
+        <span><i class="fa-solid fa-suitcase-rolling"></i> tours</span>
+        <span><i class="fa-solid fa-utensils"></i> meals</span>
+      </div>
+      <button class="book-btn">Book Now</button>
+    </article>
+
+    <article class="pkg-card tour-card">
+      <span class="tour-badge">7 Days / 6 Nights</span>
+      <!-- PLACEHOLDER: elephants at a Cape Town watering hole, lodge in the background -->
+      <img src="../images/PLACEHOLDER-tour-capetown.jpg" alt="Adventure Capetown">
+      <div class="pkg-info">
+        <h3>Adventure Capetown</h3>
+        <p class="pkg-nights">Discover Cape Town's untamed beauty.</p>
+        <p class="pkg-price">From <strong>$2300</strong> per person</p>
+      </div>
+      <div class="tour-includes">
+        <span><i class="fa-solid fa-plane"></i> flight</span>
+        <span><i class="fa-solid fa-hotel"></i> hotel</span>
+        <span><i class="fa-solid fa-suitcase-rolling"></i> tours</span>
+        <span><i class="fa-solid fa-utensils"></i> meals</span>
+      </div>
+      <button class="book-btn">Book Now</button>
+    </article>
+  </div>
+
+  <!-- Trust badges — identical block to the homepage -->
+  <section class="badges" style="margin-top:36px; border-radius: var(--radius-md); overflow:hidden;">
+    <div class="badge">
+      <span class="badge-ico"><i class="fa-solid fa-shield"></i></span>
+      <div>
+        <h4>Best Price Guarantee</h4>
+        <p>Get the best deals for your trips</p>
+      </div>
+    </div>
+    <div class="badge">
+      <span class="badge-ico"><i class="fa-solid fa-headset"></i></span>
+      <div>
+        <h4>24/7 Customer Support</h4>
+        <p>We are here to help you anytime</p>
+      </div>
+    </div>
+    <div class="badge">
+      <span class="badge-ico"><i class="fa-solid fa-award"></i></span>
+      <div>
+        <h4>Trusted & Reliable</h4>
+        <p>Thousands of Happy Travellers</p>
+      </div>
+    </div>
+    <div class="badge">
+      <span class="badge-ico"><i class="fa-solid fa-money-bill"></i></span>
+      <div>
+        <h4>Secure Booking</h4>
+        <p>Book with confidence and ease</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="tours-cta">
+    <div class="tours-cta-left">
+      <div class="tours-cta-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+      <p>Can't find what you are looking for?<br>Let our travel expert create a custom package for you.</p>
+    </div>
+    <a href="contact.html" class="tours-cta-btn">Contact Our Experts <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- ===== FOOTER (same as home) ===== -->
+<footer class="site-footer" id="contact">
+  <div class="footer-media">
+    <img src="../images/Free Summer Presets to Transform Your Beach Photos – Download Now!.jfif" alt="Sand dunes texture background">
+    <div class="footer-overlay"></div>
+  </div>
+
+  <div class="footer-content">
+    <div class="footer-col footer-brand">
+      <div class="logo-badge footer-badge">
+        <svg viewBox="0 0 0" class="logo-icon"><img src="../images/WhatsApp Image 2026-07-07 at 12.04.15 PM.jpeg" alt=""></svg>
+      </div>
+      <p class="footer-name">UNO TOURS</p>
+      <p class="footer-slogan">Travel. Explore. Live.</p>
+      <p class="footer-blurb">We create journeys that inspire, connect and leave you with memories that last a lifetime.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="../index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="destination.html">Destination</a>
+      <a href="tours.html">Travel Packages</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Help & Support</h4>
+      <a href="faqs.html">FAQs</a>
+      <a href="traveltip.html">Travel Tip</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="policy.html">Privacy Policy</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <p class="contact-line"><i class="fa-solid fa-phone"></i> +233 554 327 999<br>+233 205 447 664</p>
+      <p class="contact-line"><i class="fa-solid fa-envelope"></i> unotours1@gmail.com</p>
+      <p class="contact-line"><i class="fa-solid fa-location-pin"></i>123 Adventure Lane<br>Accra-Ghana</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p><i class="fa-regular fa-copyright"></i>2025 Uno Tours All Rights Reserved</p>
+    <div class="footer-social">
+      <span>Follow Us</span>
+      <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook fa-bounce" style="color: rgb(15, 11, 219);"></i></a>
+      <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram fa-bounce" style="color: rgb(15, 11, 219);"></i></a>
+      <a href="https://x.com/" aria-label="X"><i class="fa-brands fa-x-twitter fa-bounce" style="color: rgb(15, 11, 219);"></i></a>
+      <a href="https://www.tiktok.com/" aria-label="TikTok"><i class="fa-brands fa-tiktok fa-bounce" style="color: rgb(15, 11, 219);"></i>uno_tours</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../src/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destinations | Uno Tours</title>
+
+<script src="https://kit.fontawesome.com/8782f58de9.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+
+<!-- ===== HEADER / NAV (same as home) ===== -->
+<header class="site-header1" id="siteHeader">
+  <div class="nav-wrap">
+    <a href="../index.html" class="logo">
+      <div class="logo-badge">
+        <svg viewBox="0 0 24 24" class="logo-icon"><img src="../images/WhatsApp Image 2026-07-07 at 12.04.15 PM.jpeg" alt=""></svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">UNO TOURS</span>
+        <span class="logo-tag">Travel. Explore. Live.</span>
+      </div>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="destination.html" class="active">Destination</a>
+      <a href="tours.html">Tours</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="nav-login">Login</a>
+      <a href="signup.html" class="nav-signup">Sign Up</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== DESTINATION HERO ===== -->
+<section class="hero hero--tall">
+  <div class="hero-media">
+    <!-- PLACEHOLDER: turquoise lagoon with overwater huts and a boat, matching your brand mood -->
+    <img src="../images/Screenshot 2026-07-29 103952.png" alt="Turquoise lagoon with overwater huts" class="hero-img pos-top">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <p class="page-eyebrow">Destinations</p>
+    <h1 class="page-title">Explore Amazing<br>Destinations</h1>
+    <p class="page-sub">From vibrant cities to peaceful escapes, discover places that inspire, excite and create unforgettable memories.</p>
+  </div>
+</section>
+
+<!-- ===== DESTINATION SEARCH ===== -->
+<section class="dest-search-wrap">
+  <form class="search-panel" id="destSearchPanel">
+    <div class="search-field">
+      <span class="field-icon"><i class="fa-solid fa-location-pin"></i></span>
+      <div class="field-text">
+        <label for="destSearch">Where to?</label>
+        <input type="text" id="destSearch" placeholder="Search destination">
+      </div>
+    </div>
+    <div class="search-field">
+      <span class="field-icon"><i class="fa-regular fa-calendar"></i></span>
+      <div class="field-text">
+        <label for="destCheckin">Check In</label>
+        <input type="text" id="destCheckin" placeholder="Add Date" onfocus="(this.type='date')">
+      </div>
+    </div>
+    <div class="search-field">
+      <span class="field-icon"><i class="fa-regular fa-calendar"></i></span>
+      <div class="field-text">
+        <label for="destCheckout">Check Out</label>
+        <input type="text" id="destCheckout" placeholder="Add Date" onfocus="(this.type='date')">
+      </div>
+    </div>
+    <div class="search-field">
+      <span class="field-icon"><i class="fa-solid fa-users"></i></span>
+      <div class="field-text">
+        <label for="destTravelers">Traveler</label>
+        <input type="text" id="destTravelers" placeholder="2 Travelers">
+      </div>
+    </div>
+    <button type="submit" class="search-btn">
+      <span class="search-ico"><i class="fa-solid fa-magnifying-glass"></i></span> Search
+    </button>
+  </form>
+</section>
+
+<!-- ===== TOP PLACES TO VISIT ===== -->
+<section class="dest-showcase" id="destShowcase">
+  <p class="section-eyebrow">Popular Destination</p>
+  <h2 class="section-title">Top Places To Visit</h2>
+
+  <div class="dest-grid-full">
+    <article class="dest-card-full">
+      <!-- PLACEHOLDER: Santorini, Greece — whitewashed buildings and bougainvillea over the caldera -->
+      <img src="../images/Santorini Greece travel guide 2025 - blue domes sunset architecture Oia Village (1).jfif" alt="Santorini, Greece">
+      <div class="dest-card-full-info">
+        <h3>Santorini, Greece</h3>
+        <p>Stunning views and serene escape</p>
+        <span class="dest-price-tag">From $2000</span>
+      </div>
+    </article>
+
+    <article class="dest-card-full">
+      <!-- PLACEHOLDER: Paris, France — Eiffel Tower and the Seine at sunset -->
+      <img src="../images/WhatsApp Image 2026-07-12 at 11.14.29 PM (1).jpeg" alt="Paris, France">
+      <div class="dest-card-full-info">
+        <h3>Paris, France</h3>
+        <p>The city of lights and timeless charm</p>
+        <span class="dest-price-tag">From $1500</span>
+      </div>
+    </article>
+
+    <article class="dest-card-full">
+      <!-- PLACEHOLDER: Dubai, UAE — Burj Khalifa skyline at dusk -->
+      <img src="../images/WhatsApp Image 2026-07-12 at 11.14.29 PM.jpeg" alt="Dubai, UAE">
+      <div class="dest-card-full-info">
+        <h3>Dubai, UAE</h3>
+        <p>Modern luxury in a city of endless possibility</p>
+        <span class="dest-price-tag">From $1000</span>
+      </div>
+    </article>
+
+    <article class="dest-card-full">
+      <!-- PLACEHOLDER: Cape Town, South Africa — waterfall hike with backpacker -->
+      <img src="../images/WhatsApp Image 2026-07-11 at 12.35.17 AM (1).jpeg" alt="Cape Town, South Africa">
+      <div class="dest-card-full-info">
+        <h3>Cape Town, S.A</h3>
+        <p>Adventure, culture and breathtaking nature.</p>
+        <span class="dest-price-tag">From $900</span>
+      </div>
+    </article>
+
+    <article class="dest-card-full">
+      <!-- PLACEHOLDER: Bali, Indonesia — overwater villa at sunset -->
+      <img src="../images/Maldives Overwater Villa Luxury Travel Inspiration.jfif" alt="Bali, Indonesia">
+      <div class="dest-card-full-info">
+        <h3>Bali, Indonesia</h3>
+        <p>Tropical paradise with rich culture</p>
+        <span class="dest-price-tag">From $3000</span>
+      </div>
+    </article>
+
+    <article class="dest-card-full">
+      <!-- PLACEHOLDER: New York, USA — Central Park fountain -->
+      <img src="../images/NY verano.jfif" alt="New York, USA">
+      <div class="dest-card-full-info">
+        <h3>New York, USA</h3>
+        <p>The city that never sleeps. Beautiful parks.</p>
+        <span class="dest-price-tag">From $2500</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== FOOTER (same as home) ===== -->
+<footer class="site-footer" id="contact">
+  <div class="footer-media">
+    <img src="../images/Free Summer Presets to Transform Your Beach Photos – Download Now!.jfif" alt="Sand dunes texture background">
+    <div class="footer-overlay"></div>
+  </div>
+
+  <div class="footer-content">
+    <div class="footer-col footer-brand">
+      <div class="logo-badge footer-badge">
+        <svg viewBox="0 0 0" class="logo-icon"><img src="../images/WhatsApp Image 2026-07-07 at 12.04.15 PM.jpeg" alt=""></svg>
+      </div>
+      <p class="footer-name">UNO TOURS</p>
+      <p class="footer-slogan">Travel. Explore. Live.</p>
+      <p class="footer-blurb">We create journeys that inspire, connect and leave you with memories that last a lifetime.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="../index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="destination.html">Destination</a>
+      <a href="tours.html">Travel Packages</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Help & Support</h4>
+      <a href="faqs.html">FAQs</a>
+      <a href="traveltip.html">Travel Tip</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="policy.html">Privacy Policy</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <p class="contact-line"><i class="fa-solid fa-phone"></i> +233 554 327 999<br>+233 205 447 664</p>
+      <p class="contact-line"><i class="fa-solid fa-envelope"></i> unotours1@gmail.com</p>
+      <p class="contact-line"><i class="fa-solid fa-location-pin"></i>123 Adventure Lane<br>Accra-Ghana</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p><i class="fa-regular fa-copyright"></i>2025 Uno Tours All Rights Reserved</p>
+    <div class="footer-social">
+      <span>Follow Us</span>
+      <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook fa-bounce" style="color: rgb(15, 11, 219);"></i></a>
+      <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram fa-bounce" style="color: rgb(15, 11, 219);"></i></a>
+      <a href="https://x.com/" aria-label="X"><i class="fa-brands fa-x-twitter fa-bounce" style="color: rgb(15, 11, 219);"></i></a>
+      <a href="https://www.tiktok.com/" aria-label="TikTok"><i class="fa-brands fa-tiktok fa-bounce" style="color: rgb(15, 11, 219);"></i>uno_tours</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../src/script.js"></script>
+</body>
+</html>

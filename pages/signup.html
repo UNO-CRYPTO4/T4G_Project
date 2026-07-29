@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up | Uno Tours</title>
+
+<script src="https://kit.fontawesome.com/8782f58de9.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+
+<!-- ===== HEADER / NAV (same as home) ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="nav-wrap">
+    <a href="../index.html" class="logo">
+      <div class="logo-badge">
+        <svg viewBox="0 0 24 24" class="logo-icon"><img src="../images/WhatsApp Image 2026-07-07 at 12.04.15 PM.jpeg" alt=""></svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">UNO TOURS</span>
+        <span class="logo-tag">Travel. Explore. Live.</span>
+      </div>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="destination.html">Destination</a>
+      <a href="tours.html">Tours</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="nav-login">Login</a>
+      <a href="signup.html" class="active nav-signup">Sign Up</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== SIGNUP HERO ===== -->
+<section class="hero auth-hero">
+  <div class="hero-media">
+    <!-- PLACEHOLDER: silhouettes of backpackers walking a ridge at golden hour -->
+    <img src="../images/PLACEHOLDER-signup-hero-backpackers.jpg" alt="Backpackers walking a ridge at golden hour" class="hero-img">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <h1>Start Your Journey Today!!</h1>
+    <p>Create an account and unlock a world of unforgettable travel experiences with Uno Tours.</p>
+  </div>
+</section>
+
+<!-- ===== SIGNUP CARD ===== -->
+<section class="auth-page-bg signup-bg">
+
+  <div class="auth-card">
+    <div class="auth-icon-circle"><i class="fa-regular fa-circle-user"></i></div>
+    <h2>Create Your Account</h2>
+    <p class="auth-sub">Join Uno Tours and start exploring amazing places around the world.</p>
+
+    <form class="auth-form" id="signupForm">
+      <div class="auth-form-row">
+        <div class="auth-input">
+          <i class="fa-regular fa-user"></i>
+          <input type="text" placeholder="Full Name" required>
+        </div>
+        <div class="auth-input">
+          <i class="fa-regular fa-user"></i>
+          <input type="text" placeholder="Last Name" required>
+        </div>
+      </div>
+
+      <div class="auth-input">
+        <i class="fa-regular fa-envelope"></i>
+        <input type="email" placeholder="Email Address" required>
+      </div>
+
+      <div class="auth-input">
+        <i class="fa-solid fa-phone"></i>
+        <input type="tel" placeholder="Phone Number">
+      </div>
+
+      <div class="auth-input">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" placeholder="Password" required>
+        <i class="fa-solid fa-eye toggle-pass"></i>
+      </div>
+
+      <div class="auth-input">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" placeholder="Confirm Password" required>
+        <i class="fa-solid fa-eye toggle-pass"></i>
+      </div>
+
+      <label class="auth-checkbox">
+        <input type="checkbox" id="agreeTerms">
+        I agree to the <a href="terms.html">Terms & Conditions</a> and <a href="policy.html">Privacy Policy</a>
+      </label>
+
+      <button type="submit" class="auth-submit-btn">Sign Up <i class="fa-solid fa-user-plus"></i></button>
+
+      <div class="auth-divider">Or Continue With</div>
+
+      <div class="auth-social">
+        <button type="button" class="auth-social-btn"><i class="fa-brands fa-google"></i> Continue with Google</button>
+        <button type="button" class="auth-social-btn"><i class="fa-brands fa-apple"></i> Continue with Apple</button>
+      </div>
+
+      <p class="auth-switch" style="text-align:center;">Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+
+  <div class="auth-why">
+    <div class="auth-why-item">
+      <i class="fa-regular fa-heart"></i>
+      <h5>Save Favorites</h5>
+      <p>Save packages you love for later.</p>
+    </div>
+    <div class="auth-why-item">
+      <i class="fa-solid fa-briefcase"></i>
+      <h5>Manage Bookings</h5>
+      <p>View and manage all bookings in one place.</p>
+    </div>
+    <div class="auth-why-item">
+      <i class="fa-solid fa-headset"></i>
+      <h5>24/7 Customer Support</h5>
+      <p>We are here to help you anytime</p>
+    </div>
+    <div class="auth-why-item">
+      <i class="fa-solid fa-gift"></i>
+      <h5>Exclusive Offers</h5>
+      <p>Be the first to know about special deals and offer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER (same as home) ===== -->
+<footer class="site-footer" id="contact">
+  <div class="footer-media">
+    <img src="../images/Free Summer Presets to Transform Your Beach Photos – Download Now!.jfif" alt="Sand dunes texture background">
+    <div class="footer-overlay"></div>
+  </div>
+
+  <div class="footer-content">
+    <div class="footer-col footer-brand">
+      <div class="logo-badge footer-badge">
+        <svg viewBox="0 0 0" class="logo-icon"><img src="../images/WhatsApp Image 2026-07-07 at 12.04.15 PM.jpeg" alt=""></svg>
+      </div>
+      <p class="footer-name">UNO TOURS</p>
+      <p class="footer-slogan">Travel. Explore. Live.</p>
+      <p class="footer-blurb">We create journeys that inspire, connect and leave you with memories that last a lifetime.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="../index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="destination.html">Destination</a>
+      <a href="tours.html">Travel Packages</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Help & Support</h4>
+      <a href="faqs.html">FAQs</a>
+      <a href="traveltip.html">Travel Tip</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="policy.html">Privacy Policy</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <p class="contact-line"><i class="fa-solid fa-phone"></i> +233 554 327 999<br>+233 205 447 664</p>
+      <p class="contact-line"><i class="fa-solid fa-envelope"></i> unotours1@gmail.com</p>
+      <p class="contact-line"><i class="fa-solid fa-location-pin"></i>123 Adventure Lane<br>Accra-Ghana</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p><i class="fa-regular fa-copyright"></i>2025 Uno Tours All Rights Reserved</p>
+    <div class="footer-social">
+      <span>Follow Us</span>
+      <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook fa-bounce" style="color: rgb(15, 11, 219);"></i></a>
+      <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram fa-bounce" style="color: rgb(15, 11, 219);"></i></a>
+      <a href="https://x.com/" aria-label="X"><i class="fa-brands fa-x-twitter fa-bounce" style="color: rgb(15, 11, 219);"></i></a>
+      <a href="https://www.tiktok.com/" aria-label="TikTok"><i class="fa-brands fa-tiktok fa-bounce" style="color: rgb(15, 11, 219);"></i>uno_tours</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../src/script.js"></script>
+</body>
+</html>
