@@ -563,7 +563,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 @media (max-width: 480px) {
   .hero-eyebrow { font-size: 2.1rem; }
   .hero-title { font-size: 1.3rem; }
-  .dest-grid { grid-template-columns: repeat(3, 1fr); }
+  .dest-grid { grid-template-columns: repeat(2, 1fr); }
   .pkg-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -783,6 +783,9 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 .dest-search-wrap .search-field { background: var(--cream); }
 
 .site-header1 {
+  position: relative;
+  top: 0;
+  z-index: 100;
   background-color: rgb(105, 129, 87);
 }
 
