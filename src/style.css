@@ -1232,7 +1232,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   .auth-why { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 780px) {
   .dest-grid-full { grid-template-columns: 1fr; }
   .tours-filters { grid-template-columns: 1fr; }
   .contact-form-row { grid-template-columns: 1fr; }
