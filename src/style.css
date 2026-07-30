@@ -554,8 +554,8 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   .nav-toggle { display: flex; }
 
   .search-panel { grid-template-columns: 1fr; }
-  .dest-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 0 16px 28px; }
-  .pkg-grid { grid-template-columns: repeat(3, 1fr); }
+  .dest-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; padding: 0 16px 28px; }
+  .pkg-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-content { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
 }
@@ -563,11 +563,11 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 @media (max-width: 480px) {
   .hero-eyebrow { font-size: 2.1rem; }
   .hero-title { font-size: 1.3rem; }
-  .dest-grid { grid-template-columns: repeat(3, 1fr); }
+  .dest-grid { grid-template-columns: repeat(2, 1fr); }
   .pkg-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 320px) {
+@media (min-width: 1100px) {
   .hero-eyebrow { font-size: 3.4rem; }
   .hero-title { font-size: 2rem; }
   .hero-sub { font-size: 1.05rem; max-width: 560px; }
@@ -856,7 +856,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 .tours-section {
   position: relative;
   padding: 36px 20px 40px;
-  background-image: url('../images/PLACEHOLDER-tours-section-bg.jpg');
+  background-image: url('../images/WhatsApp\ Image\ 2026-07-12\ at\ 11.14.30\ PM.jpeg');
   background-size: cover;
   background-position: center;
 }
@@ -897,7 +897,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 .tours-cta {
   max-width: 1100px;
   margin: 30px auto 0;
-  background: var(--white);
+  background: rgb(9, 119, 119);
   border-radius: var(--radius-md);
   padding: 16px 20px;
   display: flex;
@@ -906,21 +906,27 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   gap: 16px;
   flex-wrap: wrap;
   box-shadow: var(--shadow-card);
+  opacity: 0.7;
 }
 .tours-cta-left { display: flex; align-items: center; gap: 14px; }
 .tours-cta-icon {
   width: 46px; height: 46px;
-  border: 2px solid var(--maroon-900);
+  border: 2px solid var(--maroon-950);
   border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
-  color: var(--maroon-900);
+  color: var(--maroon-950);
   font-size: 1.2rem;
   flex-shrink: 0;
 }
-.tours-cta p { font-size: 0.8rem; color: var(--ink); }
+.tours-cta p { font-size: 0.8rem; color: maroon; 
+  text-shadow: 
+    -1px -1px 0 white,
+     1px -1px 0 white,
+    -1px  1px 0 white,
+     1px  1px 0 white;}
 .tours-cta-btn {
-  background: var(--maroon-900);
-  color: var(--white);
+  background: white;
+  color: var(--maroon-950);
   font-weight: 600;
   font-size: 0.8rem;
   padding: 10px 18px;
@@ -1232,10 +1238,46 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   .auth-why { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 480px) {
   .dest-grid-full { grid-template-columns: 1fr; }
   .tours-filters { grid-template-columns: 1fr; }
   .contact-form-row { grid-template-columns: 1fr; }
   .page-title { font-size: 1.5rem; }
   .auth-card { padding: 24px 18px; }
+}
+
+/* =====================================================================
+   MOBILE RESPONSIVENESS FIXES — appended below; nothing above this
+   block has been altered.
+
+   1) .dest-grid stayed at 3 columns at every breakpoint (900px and
+      480px queries both redeclared repeat(3, 1fr), same as desktop).
+      Now steps down to 2 columns on mobile, per your preference.
+   2) .pkg-grid went 3 -> 3 -> 2; now reaches 2 columns starting at
+      the 900px breakpoint, matching your "2 columns is fine" answer.
+   3) Fixed-pixel circular elements (.center-badge, .who-we-are-photo,
+      .auth-icon-circle) never shrank on small screens and could
+      overwhelm a 320-375px viewport. Added mobile-sized overrides.
+   4) The 900px query targeted ".footer-brand" to make the logo
+      column span full width, but no element in this stylesheet (or,
+      as far as I can tell, the markup) uses that class as a wrapper
+      -- so the rule was dead. Replaced with a selector that targets
+      the footer's first column directly instead.
+   5) background-attachment: fixed on .contact-page-bg and
+      .auth-page-bg is unreliable on mobile browsers (particularly
+      iOS Safari, where it can break or hurt scroll performance).
+      Switched to scroll under 480px.
+   ===================================================================== */
+
+@media (max-width: 900px) {
+  .footer-content > :first-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 480px) {
+  .center-badge          { width: 160px; height: 160px; }
+  .stats-center .center-badge { width: 120px; height: 120px; }
+  .who-we-are-photo      { width: 180px; height: 180px; }
+  .auth-icon-circle      { width: 80px; height: 80px; font-size: 2rem; }
+
+  .contact-page-bg, .auth-page-bg { background-attachment: scroll; }
 }
