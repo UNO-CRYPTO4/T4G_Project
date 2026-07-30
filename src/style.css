@@ -563,7 +563,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 @media (max-width: 480px) {
   .hero-eyebrow { font-size: 2.1rem; }
   .hero-title { font-size: 1.3rem; }
-  .dest-grid { grid-template-columns: repeat(2, 1fr); }
+  .dest-grid { grid-template-columns: repeat(3, 1fr); }
   .pkg-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -576,25 +576,6 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   .badges { grid-template-columns: repeat(4, 1fr); }
   .section-eyebrow { font-size: 1.4rem; }
 }
-
-
-@media (max-width: 900px) {
-  .main-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--white);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px 20px;
-    gap: 8px;
-    display: none;
-  }
-  .main-nav.open { display: flex; }
-  .nav-toggle { display: flex; }
-}
-
 
 
 /* =====================================================================
@@ -616,13 +597,12 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 .pos-left   { object-position: left; }
 .pos-right  { object-position: right; }
 .pos-center { object-position: center; }
-
-/* ============ PAGE HERO (reused shell for interior pages) ============
-   Interior pages reuse .hero / .hero-media / .hero-img / .hero-overlay
+   /* Interior pages reuse .hero / .hero-media / .hero-img / .hero-overlay
    from above. .hero--tall gives interior pages a little more breathing
    room, and .hero--light-overlay is used for pages whose source photo
-   is already light (About page). */
-.hero--tall { min-height: 460px; }
+   is already light (About page). */ 
+.hero--tall {
+   min-height: 460px; }
 .hero--light-overlay .hero-overlay {
   background: linear-gradient(180deg, rgba(244,234,217,0.35) 0%, rgba(244,234,217,0.15) 45%, rgba(20,12,8,0.55) 100%);
 }
@@ -773,74 +753,30 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 .stats-center .center-title { color: var(--maroon-950); }
 
 /* ============ DESTINATION PAGE ============ */
-.dest-search-wrap { padding: 22px 20px; background: rgb(105, 129, 87); }
+.dest-search-wrap { padding: 22px 20px; background: var(--cream); }
 .dest-search-wrap .search-panel {
   max-width: 1100px;
   margin: -60px auto 0;
-  background: rgba(105,129,87);
+  background: rgba(255,255,255,0.95);
   border: 1px solid rgba(44,17,9,0.1);
 }
 .dest-search-wrap .search-field { background: var(--cream); }
 
-.site-header1 {
-  position: relative;
-  top: 0;
-  z-index: 100;
-  background-color: rgb(105, 129, 87);
-}
-
-.page-eyebrow1{
-  font-size: x-large;
-  color: #6b5a4a;
-  text-shadow: 
-    -1px -1px 0 white,
-     1px -1px 0 white,
-    -1px  1px 0 white,
-     1px  1px 0 white;
-     padding-bottom: 70px;
-    padding-right: 70px;
-    opacity: 0.7;
-}
-
-.page-sub1{
-  font-size: large;
-  color: #6b5a4a;
-  text-shadow: 
-    -1px -1px 0 white,
-     1px -1px 0 white,
-    -1px  1px 0 white,
-     1px  1px 0 white;
-     padding-top: 70px;
-    padding-right: 70px;
-    opacity: 0.7;
-}
-
-.page-title1{
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: #6b5a4a;
-  text-shadow: 
-    -1px -1px 0 white,
-     1px -1px 0 white,
-    -1px  1px 0 white,
-     1px  1px 0 white;
-}
-
-.site-footer1 {
-  position: relative;
-  color: var(--white);
-  overflow: hidden;
-  background-color: rgb(188, 243, 149);
-}
-
-
-
 .dest-showcase {
   position: relative;
   padding: 40px 20px 60px;
-  background-image: url('../images/WhatsApp\ Image\ 2026-07-12\ at\ 11.47.36\ PM\ \(1\).jpeg');
+  background-image: url('../images/PLACEHOLDER-destination-showcase-bg.jpg');
   background-size: cover;
   background-position: center;
 }
+
+.site-footer1{
+  position: relative;
+  color: var(--white);
+  overflow: hidden;
+  background-color: rgb(194, 245, 156);
+}
+
 .dest-showcase::before { content: ''; position: absolute; inset: 0; background: rgba(20,30,20,0.5); }
 .dest-showcase > * { position: relative; z-index: 1; }
 .dest-showcase .section-eyebrow, .dest-showcase .section-title { color: var(--white); padding-left: 0; }
@@ -854,7 +790,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   margin: 24px auto 0;
 }
 .dest-card-full {
-  background: rgb(105,129,87);
+  background: rgb(105 129 87);
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-card);
@@ -880,48 +816,6 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   background: var(--cream);
   display: flex;
   justify-content: center;
-}
-.page-eyebrow2{
-  font-size: x-large;
-  color: #6b5a4a;
-  text-shadow: 
-    -1px -1px 0 white,
-     1px -1px 0 white,
-    -1px  1px 0 white,
-     1px  1px 0 white;
-     padding-bottom: 70px;
-    padding-right: 70px;
-    opacity: 0.7;
-}
-
-.page-sub2{
-  font-size: large;
-  color: #6b5a4a;
-  text-shadow: 
-    -1px -1px 0 white,
-     1px -1px 0 white,
-    -1px  1px 0 white,
-     1px  1px 0 white;
-     padding-top: 70px;
-    padding-right: 70px;
-    opacity: 0.7;
-}
-
-.page-title2{
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: #6b5a4a;
-  text-shadow: 
-    -1px -1px 0 white,
-     1px -1px 0 white,
-    -1px  1px 0 white,
-     1px  1px 0 white;
-}
-
-.site-footer2 {
-  position: relative;
-  color: var(--white);
-  overflow: hidden;
-  background-color: rgb(188, 243, 149);
 }
 .tours-search-btn {
   background: var(--maroon-900);

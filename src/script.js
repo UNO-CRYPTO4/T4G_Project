@@ -1,8 +1,4 @@
 // ============ MOBILE NAV TOGGLE ============
-// (unchanged logic — header/nav is identical on every page, so this
-// still just works. Only added a null-guard in case a page ever
-// loads this file without the header markup.)
-// ============ MOBILE NAV TOGGLE ============
 const navToggle = document.getElementById('navToggle');
 const mainNav = document.getElementById('mainNav');
 
@@ -10,14 +6,12 @@ if (navToggle && mainNav) {
   navToggle.addEventListener('click', () => {
     mainNav.classList.toggle('open');
   });
-
   mainNav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       mainNav.classList.remove('open');
     });
   });
 }
-
 
 // ============ STICKY HEADER SHADOW ============
 const header = document.getElementById('siteHeader');
@@ -33,21 +27,17 @@ if (header) {
 
 // ============ SEARCH FORM (home hero) ============
 const searchPanel = document.getElementById('searchPanel');
-
 if (searchPanel) {
   searchPanel.addEventListener('submit', (e) => {
     e.preventDefault();
-
     const destinationEl = document.getElementById('destination');
     const travelersEl = document.getElementById('travelers');
     const checkinEl = document.getElementById('checkin');
     const checkoutEl = document.getElementById('checkout');
-
     const destination = destinationEl ? destinationEl.value.trim() : '';
     const travelers = travelersEl ? travelersEl.value.trim() : '';
     const checkin = checkinEl ? checkinEl.value.trim() : '';
     const checkout = checkoutEl ? checkoutEl.value.trim() : '';
-
     if (!destination) {
       if (destinationEl) {
         destinationEl.focus();
@@ -55,10 +45,7 @@ if (searchPanel) {
       }
       return;
     }
-
     console.log('Search submitted:', { destination, travelers, checkin, checkout });
-
-    // Scroll to packages as a stand-in "results" section (home page only)
     const packagesSection = document.getElementById('packages');
     if (packagesSection) {
       packagesSection.scrollIntoView({ behavior: 'smooth' });
@@ -78,7 +65,6 @@ document.querySelectorAll('.book-btn').forEach(btn => {
 
 // ============ SCROLL REVEAL ANIMATION ============
 const revealTargets = document.querySelectorAll('.dest-card, .pkg-card, .badge, .dest-card-full, .pillar, .stat-item, .auth-why-item');
-
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -88,19 +74,12 @@ const revealObserver = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.15 });
-
 revealTargets.forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(18px)';
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   revealObserver.observe(el);
 });
-
-
-/* =====================================================================
-   EVERYTHING BELOW THIS LINE IS NEW — added for the interior pages.
-   Nothing above this line has been changed.
-   ===================================================================== */
 
 // ============ DESTINATION PAGE SEARCH ============
 const destSearchPanel = document.getElementById('destSearchPanel');
@@ -157,7 +136,7 @@ if (signupForm) {
   });
 }
 
-// ============ PASSWORD SHOW/HIDE TOGGLE (login + signup) ============
+// ============ PASSWORD SHOW/HIDE TOGGLE ============
 document.querySelectorAll('.toggle-pass').forEach(toggle => {
   toggle.addEventListener('click', () => {
     const input = toggle.closest('.auth-input').querySelector('input');
