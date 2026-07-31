@@ -1061,7 +1061,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 /* ============ AUTH PAGES (LOGIN / SIGNUP) ============ */
 .auth-hero {
   position: relative;
-  min-height: 220px;
+  /* min-height: 220px; */
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -1074,6 +1074,17 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   font-size: 1.6rem;
   margin-bottom: 8px;
 }
+
+.site-header5{
+  background-color: rgb(94 69 39);}
+
+  .site-footer5{
+  position: relative;
+  color: var(--white);
+  overflow: hidden;
+  background-color: rgb(94 69 39)
+}
+
 .auth-hero p { font-size: 0.9rem; line-height: 1.5; max-width: 420px; }
 
 .auth-page-bg {
@@ -1086,7 +1097,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 .auth-page-bg::before { content:''; position:absolute; inset:0; background: rgba(20,30,45,0.35); }
 .auth-page-bg > * { position: relative; z-index: 1; }
 /* PLACEHOLDER: full-page background — tropical beach with palm trees */
-.login-bg { background-image: url('../images/PLACEHOLDER-login-bg-beach.jpg'); }
+.login-bg { background-image: url('../images/download\ \(4\).jfif'); }
 /* PLACEHOLDER: full-page background — city skyscrapers by the marina */
 .signup-bg { background-image: url('../images/PLACEHOLDER-signup-bg-dubai.jpg'); }
 
@@ -1110,6 +1121,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   font-size: 2.6rem;
   color: var(--ink);
   margin: 0 auto 18px;
+  overflow: hidden;
 }
 .auth-card h2 {
   font-family: var(--font-display);
@@ -1208,14 +1220,14 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   gap: 14px;
 }
 .auth-why-item {
-  background: rgba(255,255,255,0.92);
+  background: rgb(94, 69, 39);
   border-radius: var(--radius-md);
   padding: 16px;
   text-align: center;
 }
 .auth-why-item i { font-size: 1.4rem; color: var(--maroon-900); margin-bottom: 8px; }
-.auth-why-item h5 { font-size: 0.8rem; margin-bottom: 4px; color: var(--maroon-950); }
-.auth-why-item p { font-size: 0.72rem; color: #6b5a4a; line-height: 1.4; }
+.auth-why-item h5 { font-size: 0.8rem; margin-bottom: 4px; color: white; }
+.auth-why-item p { font-size: 0.72rem; color: white; line-height: 1.4; }
 
 /* ============ INTERIOR-PAGE RESPONSIVE ============ */
 @media (max-width: 900px) {
