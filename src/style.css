@@ -939,12 +939,23 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 
 /* ============ CONTACT PAGE ============ */
 .contact-page-bg {
-  background-image: url('../images/PLACEHOLDER-contact-bg-city.jpg');
+  background-image: url('../images/Breathtaking\ Scenery\ That\ Will\ Leave\ You\ Speechless.jfif');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   padding: 40px 20px 60px;
 }
+
+.site-header5{
+  background: url(../images/download\ \(4\).jfif);
+}
+.site-footer5{
+  position: relative;
+  color: var(--white);
+  overflow: hidden;
+  background-color: rgb(187, 112, 65);
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -1075,15 +1086,6 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   margin-bottom: 8px;
 }
 
-.site-header5{
-  background-color: rgb(94 69 39);}
-
-  .site-footer5{
-  position: relative;
-  color: var(--white);
-  overflow: hidden;
-  background-color: rgb(94 69 39)
-}
 
 .auth-hero p { font-size: 0.9rem; line-height: 1.5; max-width: 420px; }
 
