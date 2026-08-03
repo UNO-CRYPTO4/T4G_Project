@@ -611,7 +611,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 700;
-  color: var(--gold);
+  color: black;
   background: rgba(255,255,255,0.85);
   display: inline-block;
   padding: 4px 12px;
@@ -623,7 +623,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   font-family: var(--font-display);
   font-size: 2rem;
   font-weight: 800;
-  color: var(--gold);
+  color: black;
   text-shadow: 2px 2px 0 rgba(44,17,9,0.25);
   margin-bottom: 14px;
 }
@@ -637,7 +637,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   padding: 14px 18px;
   border-radius: var(--radius-md);
   font-weight: 500;
-  opacity: 0.5;
+  opacity: 0.89
 }
 
 /* ============ ABOUT PAGE ============ */
@@ -1101,7 +1101,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 /* PLACEHOLDER: full-page background — tropical beach with palm trees */
 .login-bg { background-image: url('../images/download\ \(4\).jfif'); }
 /* PLACEHOLDER: full-page background — city skyscrapers by the marina */
-.signup-bg { background-image: url('../images/PLACEHOLDER-signup-bg-dubai.jpg'); }
+.signup-bg { background-image: url('../images/basic\ abaya\ -\ Retail\ Shopping\ in\ Downtown\ Dubai\ Dubai\ _\ Reviews\ &\ Ratings.jfif'); }
 
 .auth-card {
   max-width: 440px;
