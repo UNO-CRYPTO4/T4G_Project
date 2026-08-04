@@ -1,0 +1,27 @@
+#results, #checkout, #thankyou {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.pkg-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.pkg-card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.book-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;  }

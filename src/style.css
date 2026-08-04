@@ -456,7 +456,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 }
 .footer-media { position: absolute; inset: 0; z-index: 0; }
 .footer-media img { width: 100%; height: 100%; object-fit: cover; }
-.footer-overlay {
+.footer-overlay1 {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(20,10,5,0.55), rgba(15,7,4,0.9));
@@ -592,59 +592,60 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
    <img class="hero-img pos-top" ...>
    Fine-tune further with an inline style if needed:
    <img class="hero-img" style="object-position: 50% 20%;" ...> */
-.pos-top    { object-position: top; }
+/* .pos-top    { object-position: top; }
 .pos-bottom { object-position: bottom; }
 .pos-left   { object-position: left; }
 .pos-right  { object-position: right; }
-.pos-center { object-position: center; }
+.pos-center { object-position: center; } */
    /* Interior pages reuse .hero / .hero-media / .hero-img / .hero-overlay
    from above. .hero--tall gives interior pages a little more breathing
    room, and .hero--light-overlay is used for pages whose source photo
    is already light (About page). */ 
-.hero--tall {
-   min-height: 460px; }
+
 .hero--light-overlay .hero-overlay {
   background: linear-gradient(180deg, rgba(244,234,217,0.35) 0%, rgba(244,234,217,0.15) 45%, rgba(20,12,8,0.55) 100%);
 }
-.hero--light-overlay .hero-content { color: var(--white); }
-.page-eyebrow {
+.hero--light-overlay .hero-content { color: black; }
+.hero--tall { min-height: 1500px; }
+.hero-img7 { width: 100%; height: 100%; object-fit: contain; }
+
+.page-eyebrow7 {
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 700;
-  color: black;
-  background: rgba(255,255,255,0.85);
+  color: var(--gold);
   display: inline-block;
   padding: 4px 12px;
   border-radius: 6px;
-  font-size: 0.85rem;
+  font-size: 5rem;
   margin-bottom: 10px;
 }
-.page-title {
+.page-title7 {
   font-family: var(--font-display);
   font-size: 2rem;
   font-weight: 800;
-  color: black;
+  color: var(--gold);
   text-shadow: 2px 2px 0 rgba(44,17,9,0.25);
   margin-bottom: 14px;
 }
-.page-sub {
+.page-sub7 {
   max-width: 620px;
-  font-size: 0.95rem;
+  font-size: 1.5rem;
   line-height: 1.6;
-  background: rgba(255,255,255,0.9);
+background: white;
   color: var(--ink);
-  display: inline-block;
+  display: flex;
   padding: 14px 18px;
   border-radius: var(--radius-md);
   font-weight: 500;
-  opacity: 0.89
+
 }
 
 /* ============ ABOUT PAGE ============ */
 .about-story {
   position: relative;
   padding: 50px 20px;
-  background-image: url('../images/PLACEHOLDER-about-backpackers-bg.jpg');
+  background-image: url('../images/Ultimate\ Travel\ Inspiration\ for\ Wanderlust.jfif');
   background-size: cover;
   background-position: center;
 }
@@ -663,11 +664,11 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   max-width: 1100px;
   margin: 0 auto 50px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center;;
 }
 .who-we-are-photo {
-  width: 280px;
-  height: 280px;
+  width: 450px;
+  height: 450px;
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid var(--gold);
@@ -686,10 +687,10 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   font-style: italic;
   color: var(--maroon-900);
   margin-bottom: 12px;
-  font-size: 0.85rem;
+  font-size: 3rem;
 }
 .who-we-are-text p {
-  font-size: 0.95rem;
+  font-size: 2rem;
   line-height: 1.7;
   font-weight: 600;
   color: var(--ink);
@@ -704,20 +705,20 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   text-align: center;
 }
 .pillar-icon {
-  width: 90px;
-  height: 90px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 2px solid var(--maroon-900);
   background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
+  font-size: 6rem;
   color: var(--maroon-900);
   margin: 0 auto 14px;
 }
 .pillar h3.pill-label { display: inline-block; }
-.pillar p { font-size: 0.85rem; font-weight: 600; line-height: 1.5; color: var(--ink); }
+.pillar p { font-size: 2rem; font-weight: 600; line-height: 1.5; color: var(--ink); }
 
 .stats-band {
   display: grid;
@@ -730,15 +731,15 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 .stats-col { display: flex; flex-direction: column; gap: 26px; }
 .stat-item { text-align: center; }
 .stat-ico {
-  width: 78px;
-  height: 78px;
+  width: 300px;
+  height: 300px;
   border: 2px solid var(--gold);
   border-radius: 12px;
   background: var(--white);
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  align-items: center;
+   font-size: 10rem;
   color: var(--maroon-900);
   margin: 0 auto 8px;
 }
@@ -746,11 +747,11 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   font-family: var(--font-display);
   font-weight: 800;
   color: var(--gold);
-  font-size: 1.3rem;
+  font-size: 3rem;
 }
-.stat-caption { font-size: 0.8rem; font-weight: 600; color: var(--ink); }
+.stat-caption { font-size: 2rem; font-weight: 600; color: var(--ink); }
 .stats-center { text-align: center; }
-.stats-center .center-badge { width: 170px; height: 170px; margin: 0 auto; }
+.stats-center .center-badge { width: 300px; height: 300px; margin: 0 auto; }
 .stats-center .center-title { color: var(--maroon-950); }
 
 /* ============ DESTINATION PAGE ============ */
@@ -777,7 +778,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   position: relative;
   color: var(--white);
   overflow: hidden;
-  background-color: rgb(194, 245, 156);
+  background-color: rgb(105, 129, 87);
 }
 
 .dest-showcase::before { content: ''; position: absolute; inset: 0; background: rgba(20,30,20,0.5); }
@@ -821,7 +822,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   justify-content: center;
 }
 .tours-search-btn {
-  background: var(--maroon-900);
+  background: rgb(9, 119, 119);
   color: var(--white);
   font-weight: 600;
   font-size: 0.85rem;
@@ -840,8 +841,8 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   margin: 0 auto;
 }
 .tours-filter {
-  background: var(--white);
-  border: 1px solid rgba(44,17,9,0.15);
+  background: rgb(9, 119, 119);
+  border: 1px solid white;
   border-radius: var(--radius-md);
   padding: 10px 14px;
   display: flex;
@@ -850,8 +851,8 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   font-size: 0.8rem;
 }
 .tours-filter i { color: var(--maroon-900); font-size: 1.1rem; }
-.tours-filter strong { display: block; font-size: 0.75rem; color: var(--maroon-900); }
-.tours-filter span { color: #6b5a4a; font-size: 0.75rem; }
+.tours-filter strong { display: block; font-size: 0.75rem; color: black; }
+.tours-filter span { color:white; font-size: 0.75rem; }
 
 .tours-section {
   position: relative;
@@ -872,6 +873,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 }
 .pkg-card.tour-card { position: relative; }
 .pkg-card.tour-card img { height: 170px; }
+ .pkg-info { background-color: rgb(9, 119, 119); }
 .tour-badge {
   position: absolute;
   top: 12px;
@@ -889,10 +891,27 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   gap: 12px;
   padding: 0 12px 12px;
   font-size: 0.7rem;
-  color: #6b5a4a;
+  color: white;
   flex-wrap: wrap;
+  background: rgb(9, 119, 119);
 }
 .tour-includes span { display: flex; align-items: center; gap: 4px; }
+.book-btn1 {
+  position: relative;
+  z-index: 2;
+  margin: 8px 12px 12px;
+  background: var(--maroon-800);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  
+}
+.book-btn1:hover { background: var(--gold-dark); }
+
+
 
 .tours-cta {
   max-width: 1100px;
@@ -920,10 +939,10 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 }
 .tours-cta p { font-size: 0.8rem; color: maroon; 
   text-shadow: 
-    -1px -1px 0 white,
-     1px -1px 0 white,
-    -1px  1px 0 white,
-     1px  1px 0 white;}
+    -1px -1px 0 rgb(7, 0, 0),
+     1px -1px 0 rgb(7, 0, 0),
+    -1px  1px 0 rgb(20, 0, 0),
+     1px  1px 0 rgb(15, 0, 0);}
 .tours-cta-btn {
   background: white;
   color: var(--maroon-950);
@@ -947,13 +966,13 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 }
 
 .site-header5{
-  background: url(../images/download\ \(4\).jfif);
+  background: rgba(160, 120, 85, 0.9);
 }
 .site-footer5{
   position: relative;
   color: var(--white);
   overflow: hidden;
-  background-color: rgb(187, 112, 65);
+  background-color: rgba(160, 120, 85, 0.9);
 }
 
 .contact-grid {
@@ -1101,7 +1120,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 /* PLACEHOLDER: full-page background — tropical beach with palm trees */
 .login-bg { background-image: url('../images/download\ \(4\).jfif'); }
 /* PLACEHOLDER: full-page background — city skyscrapers by the marina */
-.signup-bg { background-image: url('../images/basic\ abaya\ -\ Retail\ Shopping\ in\ Downtown\ Dubai\ Dubai\ _\ Reviews\ &\ Ratings.jfif'); }
+.signup-bg { background-image: url('../images/PLACEHOLDER-signup-bg-dubai.jpg'); }
 
 .auth-card {
   max-width: 440px;
