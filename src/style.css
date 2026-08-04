@@ -39,13 +39,14 @@ button { font-family: inherit; cursor: pointer; border: none; }
 .site-header {
   position: relative;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   box-shadow: 0 2px 12px rgba(44, 17, 9, 0.08);
-  background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Beach\ Photos\ –\ Download\ Now!.jfif');
+  background-image: url(../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Beach\ Photos\ –\ Download\ Now!.jfif);
   
 }
 
 .nav-wrap {
+  position: relative;
   max-width: 1280px;
   margin: 0 auto;
   padding: 12px 20px;
@@ -122,7 +123,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
   border-radius: 6px;
   padding: 8px 14px;
 }
-.nav-login { color: var(--maroon-900); }
+.nav-login { color: white }
 .nav-signup {
   background: var(--gold);
   color: var(--white) !important;
@@ -542,7 +543,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
     top: 100%;
     left: 0;
     right: 0;
-    background: var(--white);
+    background: white;
     flex-direction: column;
     align-items: flex-start;
     padding: 12px 20px 20px;
@@ -551,6 +552,13 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
     box-shadow: 0 12px 20px rgba(0,0,0,0.08);
   }
   .main-nav.open { display: flex; }
+  .main-nav a {
+    color: var(--ink);
+  }
+  .main-nav a.nav-login,
+  .main-nav a.nav-signup {
+    color: var(--ink);
+  }
   .nav-toggle { display: flex; }
 
   .search-panel { grid-template-columns: 1fr; }
@@ -606,7 +614,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   background: linear-gradient(180deg, rgba(244,234,217,0.35) 0%, rgba(244,234,217,0.15) 45%, rgba(20,12,8,0.55) 100%);
 }
 .hero--light-overlay .hero-content { color: black; }
-.hero--tall { min-height: 1500px; }
+/* .hero--tall2 { min-height: 1500px; } */
 .hero-img7 { width: 100%; height: 100%; object-fit: contain; }
 
 .page-eyebrow7 {
@@ -817,13 +825,13 @@ background: white;
 /* ============ TOURS PAGE ============ */
 .tours-search-wrap {
   padding: 22px 20px 30px;
-  background: var(--cream);
+  background: rgb(9, 119, 119);
   display: flex;
   justify-content: center;
 }
 .tours-search-btn {
-  background: rgb(9, 119, 119);
-  color: var(--white);
+  background: white;
+  color: var(--maroon-950);
   font-weight: 600;
   font-size: 0.85rem;
   padding: 10px 20px;
@@ -841,8 +849,8 @@ background: white;
   margin: 0 auto;
 }
 .tours-filter {
-  background: rgb(9, 119, 119);
-  border: 1px solid white;
+  background: white;
+  border: 1px solid var(--ink);
   border-radius: var(--radius-md);
   padding: 10px 14px;
   display: flex;
@@ -852,7 +860,7 @@ background: white;
 }
 .tours-filter i { color: var(--maroon-900); font-size: 1.1rem; }
 .tours-filter strong { display: block; font-size: 0.75rem; color: black; }
-.tours-filter span { color:white; font-size: 0.75rem; }
+.tours-filter span { color:var(--maroon-950); font-size: 0.75rem; }
 
 .tours-section {
   position: relative;
@@ -873,7 +881,7 @@ background: white;
 }
 .pkg-card.tour-card { position: relative; }
 .pkg-card.tour-card img { height: 170px; }
- .pkg-info { background-color: rgb(9, 119, 119); }
+ 
 .tour-badge {
   position: absolute;
   top: 12px;
@@ -891,9 +899,9 @@ background: white;
   gap: 12px;
   padding: 0 12px 12px;
   font-size: 0.7rem;
-  color: white;
+  color: var(--maroon-900);
   flex-wrap: wrap;
-  background: rgb(9, 119, 119);
+
 }
 .tour-includes span { display: flex; align-items: center; gap: 4px; }
 .book-btn1 {
@@ -937,7 +945,7 @@ background: white;
   font-size: 1.2rem;
   flex-shrink: 0;
 }
-.tours-cta p { font-size: 0.8rem; color: maroon; 
+.tours-cta p { font-size: 0.8rem; color: white; 
   text-shadow: 
     -1px -1px 0 rgb(7, 0, 0),
      1px -1px 0 rgb(7, 0, 0),
@@ -956,6 +964,16 @@ background: white;
 }
 .tours-cta-btn:hover { background: var(--gold-dark); }
 
+
+.site-header6{
+  position: relative;
+  top: 0;
+  z-index: 1000;
+  background-color: rgb(9, 119, 119);
+}
+.site-footer6 {
+  background-color: rgb(9, 119, 119);
+}
 /* ============ CONTACT PAGE ============ */
 .contact-page-bg {
   background-image: url('../images/Breathtaking\ Scenery\ That\ Will\ Leave\ You\ Speechless.jfif');
@@ -1089,6 +1107,15 @@ background: white;
 .chat-expert-btn i { display: block; margin-top: 4px; }
 
 /* ============ AUTH PAGES (LOGIN / SIGNUP) ============ */
+.site-header9{
+  position: relative;
+  top: 0;
+  z-index: 1000;
+  background-color: rgb(94, 69, 39);
+}
+.site-footer9 {
+  background-color: rgb(94, 69, 39);
+}
 .auth-hero {
   position: relative;
   /* min-height: 220px; */
@@ -1120,7 +1147,7 @@ background: white;
 /* PLACEHOLDER: full-page background — tropical beach with palm trees */
 .login-bg { background-image: url('../images/download\ \(4\).jfif'); }
 /* PLACEHOLDER: full-page background — city skyscrapers by the marina */
-.signup-bg { background-image: url('../images/PLACEHOLDER-signup-bg-dubai.jpg'); }
+.signup-bg { background-image: url('../images/basic\ abaya\ -\ Retail\ Shopping\ in\ Downtown\ Dubai\ Dubai\ _\ Reviews\ &\ Ratings.jfif'); }
 
 .auth-card {
   max-width: 440px;
