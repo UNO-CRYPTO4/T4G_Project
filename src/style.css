@@ -279,15 +279,16 @@ button { font-family: inherit; cursor: pointer; border: none; }
 }
 .section-title {
   font-size: 0.88rem;
-  color: white;
+  color: black;
   font-weight: 700;
   padding: 4px 20px 20px;
+  
 
 }
 
 /* ============ DESTINATIONS ============ */
 .destinations { padding-top: 32px; background: var(--cream);
-background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Beach\ Photos\ –\ Download\ Now!.jfif');
+background-color: var(--cream);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -339,10 +340,11 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 .packages {
   position: relative;
   padding: 36px 20px 60px;
-  background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Beach\ Photos\ –\ Download\ Now!.jfif');
+  background-color : var(--cream);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  
 }
 
 .pkg-grid {
@@ -408,6 +410,18 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
 }
 .book-btn:hover { background: var(--gold-dark); }
 
+
+.field-text select {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: var(--ink);
+  padding: 0;
+  width: 100%;
+}
+.field-text select:focus { outline: none; }
+
 .pkg-center-logo {
   grid-column: auto;
   display: flex;
@@ -429,6 +443,20 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   box-shadow: var(--shadow-card);
   overflow: hidden;
 }
+
+.center-badge1 {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 3px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  opacity: 0.5;
+}
 .center-icon {
   width: 100%;
   height: 100%;
@@ -440,6 +468,7 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   object-fit: cover;
   display: block;
 }
+
 .center-title {
   font-family: var(--font-display);
   font-weight: 800;
@@ -637,9 +666,9 @@ background-image: url('../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Bea
   color: var(--maroon-950);
   display: inline-block;
   padding: 4px 12px;
-  border-radius: 6px;
+  border-radius: 30px;
   font-size: 5rem;
-  margin-bottom: 10px;
+  margin-bottom: 100px;
   background: white;
   -webkit-text-stroke: 3px var(--gold-dark);
   opacity: 0.8;
@@ -821,7 +850,7 @@ margin-top: 150px;
 .stat-number {
   font-family: var(--font-display);
   font-weight: 800;
-  color: var(--gold);
+  color: white;
   font-size: 3rem;
 }
 .stat-caption { font-size: 2rem; font-weight: 600; color: var(--ink); }
@@ -842,9 +871,10 @@ margin-top: 150px;
 .dest-showcase {
   position: relative;
   padding: 40px 20px 60px;
-  background-image: url('../images/WhatsApp\ Image\ 2026-07-12\ at\ 11.47.36\ PM\ \(1\).jpeg');
+  background-color: rgb(105 129 87);
   background-size: cover;
   background-position: center;
+  
 }
 .site-header1{
   background-color: rgb(105 129 87);
@@ -869,20 +899,27 @@ margin-top: 150px;
   margin: 24px auto 0;
 }
 .dest-card-full {
-  background: rgb(105 129 87);
+  background: white;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-card);
-  color: var(--white);
+  color: var(maroon-950);
+  border: 5px solid var(--ink);
 }
+
+.dest-card-full:hover { 
+  transform: translateY(-4px);
+   box-shadow: 0 16px 36px rgba(44, 17, 9, 0.35); 
+   border-color: greenyellow; }
+   
 .dest-card-full img { width: 100%; height: 170px; object-fit: cover; }
 .dest-card-full-info { padding: 14px 16px 18px; }
 .dest-card-full-info h3 { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 6px; }
-.dest-card-full-info p { font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px; color: var(--tan-200); }
+.dest-card-full-info p { font-size: 0.85rem; line-height: 1.4; margin-bottom: 10px; color: rgb(99, 73, 73); }
 .dest-price-tag {
   display: inline-block;
-  background: var(--white);
-  color: var(--maroon-900);
+  background: var(--maroon-950);
+  color: var(--white);
   font-weight: 700;
   font-size: 0.8rem;
   padding: 6px 12px;
@@ -1192,6 +1229,7 @@ margin-top: 150px;
 }
 .auth-hero .hero-media { position: absolute; inset: 0; }
 .auth-hero .hero-content { color: white; padding: 30px 24px;  }
+ 
 .auth-hero h1 {
   font-family: var(--font-display);
   color: white;
@@ -1200,7 +1238,16 @@ margin-top: 150px;
 }
 
 
-.auth-hero p { font-size: 0.9rem; line-height: 1.5; max-width: 420px; }
+.auth-hero p { font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 700;
+  color: var(--maroon-950);
+  display: inline-block;
+  padding: 4px 12px;
+  background: white;
+  font-size: 2rem;
+  opacity: 0.8;
+  border-radius: 6px;}
 
 .auth-page-bg {
   position: relative;

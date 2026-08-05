@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Results — UNO TOURS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../src/style.css" />
+</head>
+<body>
+
+  <section style="max-width:1100px;margin:0 auto;padding:40px 20px;">
+    <p class="section-eyebrow">Search Results</p>
+    <h2 class="section-title" id="resultsSummary">Loading your search...</h2>
+
+    <div class="pkg-grid" id="resultsGrid"></div>
+  </section>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const destination = params.get('destination') || 'Anywhere';
+    const travelers = params.get('travelers') || '';
+    const checkin = params.get('checkin') || '';
+    const checkout = params.get('checkout') || '';
+
+    document.getElementById('resultsSummary').textContent =
+      `${destination} · ${travelers.replace(/-/g, ' ')} · ${checkin || 'Any date'} → ${checkout || 'Any date'}`;
+
+    // TODO: replace this mock array with a real fetch('/api/search?' + params.toString())
+    // once the backend/database exists.
+    const mockResults = [
+      { name: `${destination} Getaway`, nights: '5 Nights / 6 Days', price: 1800, img: '../images/Santorini Greece travel guide 2025 - blue domes sunset architecture Oia Village (1).jfif' },
+      { name: `${destination} Explorer Package`, nights: '4 Nights / 5 Days', price: 1500, img: '../images/Dreamy Bali Travel Aesthetic 🌅 _ Tropical Mood Board.jfif' },
+      { name: `${destination} Luxury Escape`, nights: '6 Nights / 7 Days', price: 2600, img: '../images/Maldives Overwater Villa Luxury Travel Inspiration.jfif' }
+    ];
+
+    const grid = document.getElementById('resultsGrid');
+    mockResults.forEach(pkg => {
+      const card = document.createElement('article');
+      card.className = 'pkg-card';
+      card.innerHTML = `
+        <img src="${pkg.img}" alt="${pkg.name}" />
+        <div class="pkg-info">
+          <h3>${pkg.name}</h3>
+          <p class="pkg-nights">${pkg.nights}</p>
+          <p class="pkg-price">From <strong>$${pkg.price}</strong> per person</p>
+        </div>
+        <button class="book-btn">Book Now</button>
+      `;
+      grid.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>

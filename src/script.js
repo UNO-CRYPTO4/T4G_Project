@@ -26,40 +26,34 @@ if (header) {
 }
 
 // ============ SEARCH FORM (home hero) ============
-const searchPanel = document.getElementById('searchPanel');
-if (searchPanel) {
-  searchPanel.addEventListener('submit', (e) => {
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('searchPanel');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const destinationEl = document.getElementById('destination');
-    const travelersEl = document.getElementById('travelers');
-    const checkinEl = document.getElementById('checkin');
-    const checkoutEl = document.getElementById('checkout');
-    const destination = destinationEl ? destinationEl.value.trim() : '';
-    const travelers = travelersEl ? travelersEl.value.trim() : '';
-    const checkin = checkinEl ? checkinEl.value.trim() : '';
-    const checkout = checkoutEl ? checkoutEl.value.trim() : '';
+
+    const destination = document.getElementById('destination')?.value.trim() || '';
+    const travelers = document.getElementById('travelers')?.value || '';
+    const checkin = document.getElementById('checkin')?.value || '';
+    const checkout = document.getElementById('checkout')?.value || '';
+
     if (!destination) {
-      if (destinationEl) {
-        destinationEl.focus();
-        destinationEl.placeholder = 'Please enter a destination';
-      }
+      alert('Please enter a destination.');
       return;
     }
-    console.log('Search submitted:', { destination, travelers, checkin, checkout });
-    const packagesSection = document.getElementById('packages');
-    if (packagesSection) {
-      packagesSection.scrollIntoView({ behavior: 'smooth' });
+    if (checkin && checkout && checkout < checkin) {
+      alert('Check-out date must be after check-in date.');
+      return;
     }
-  });
-}
 
-// ============ BOOK NOW BUTTONS ============
-document.querySelectorAll('.book-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const card = btn.closest('.pkg-card');
-    const heading = card ? card.querySelector('h3') : null;
-    const packageName = heading ? heading.textContent : 'this package';
-    alert(`Thanks for your interest in "${packageName}"! Our team will reach out to help you book this trip.`);
+    const params = new URLSearchParams({ destination, travelers, checkin, checkout });
+
+    // Works whether the form lives at the site root (index.html) or inside /pages/
+    const inPagesFolder = window.location.pathname.includes('/pages/');
+    const resultsUrl = inPagesFolder ? 'results.html' : 'pages/results.html';
+
+    window.location.href = `${resultsUrl}?${params.toString()}`;
   });
 });
 

@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="src/style.css" />
+  
 </head>
 <body>
 
@@ -56,36 +57,43 @@
       </p>
 
       <form class="search-panel" id="searchPanel">
-        <div class="search-field">
-          <span class="field-icon">📍</span>
-          <div class="field-text">
-            <label for="destination">Where to?</label>
-            <input type="text" id="destination" placeholder="City, country or region" />
-          </div>
-        </div>
-        <div class="search-field">
-          <span class="field-icon">👥</span>
-          <div class="field-text">
-            <label for="travelers">Travelers</label>
-            <input type="text" id="travelers" placeholder="2 Adults" />
-          </div>
-        </div>
-        <div class="search-field">
-          <span class="field-icon">📅</span>
-          <div class="field-text">
-            <label for="checkin">Check In</label>
-            <input type="text" id="checkin" placeholder="Add date" />
-          </div>
-        </div>
-        <div class="search-field">
-          <span class="field-icon">📅</span>
-          <div class="field-text">
-            <label for="checkout">Check Out</label>
-            <input type="text" id="checkout" placeholder="Add date" />
-          </div>
-        </div>
-        <button type="submit" class="search-btn">🔍 Search Now</button>
-      </form>
+  <div class="search-field">
+    <span class="field-icon">📍</span>
+    <div class="field-text">
+      <label for="destination">Where to?</label>
+      <input type="text" id="destination" placeholder="City, country or region" required />
+    </div>
+  </div>
+  <div class="search-field">
+    <span class="field-icon">👥</span>
+    <div class="field-text">
+      <label for="travelers">Travelers</label>
+      <select id="travelers">
+        <option value="1-adult">1 Adult</option>
+        <option value="2-adults" selected>2 Adults</option>
+        <option value="2-adults-1-child">2 Adults, 1 Child</option>
+        <option value="2-adults-2-children">2 Adults, 2 Children</option>
+        <option value="family-5">Family (5+)</option>
+        <option value="group">Group (6+)</option>
+      </select>
+    </div>
+  </div>
+  <div class="search-field">
+    <span class="field-icon">📅</span>
+    <div class="field-text">
+      <label for="checkin">Check In</label>
+      <input type="date" id="checkin" required />
+    </div>
+  </div>
+  <div class="search-field">
+    <span class="field-icon">📅</span>
+    <div class="field-text">
+      <label for="checkout">Check Out</label>
+      <input type="date" id="checkout" required />
+    </div>
+  </div>
+  <button type="submit" class="search-btn">🔍 Search Now</button>
+</form>
     </div>
   </section>
 
