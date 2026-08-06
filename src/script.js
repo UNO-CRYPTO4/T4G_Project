@@ -3,13 +3,34 @@ const navToggle = document.getElementById('navToggle');
 const mainNav = document.getElementById('mainNav');
 
 if (navToggle && mainNav) {
-  navToggle.addEventListener('click', () => {
-    mainNav.classList.toggle('open');
+  const closeMenu = () => {
+    mainNav.classList.remove('open');
+    navToggle.classList.remove('is-active');
+    navToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  navToggle.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const isOpen = mainNav.classList.toggle('open');
+    navToggle.classList.toggle('is-active', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
   });
+
   mainNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mainNav.classList.remove('open');
-    });
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+    if (target instanceof Node && !mainNav.contains(target) && !navToggle.contains(target)) {
+      closeMenu();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+      closeMenu();
+    }
   });
 }
 
@@ -95,6 +116,32 @@ if (toursSearchBtn) {
   });
 }
 
+// ============ PACKAGE BOOK NOW BUTTONS ============
+function getPackageDetails(button) {
+  const card = button.closest('article');
+  if (!card) return null;
+  const name = card.querySelector('.pkg-info h3')?.textContent.trim() || 'Travel Package';
+  const nights = card.querySelector('.pkg-nights')?.textContent.trim() || '';
+  const priceText = card.querySelector('.pkg-price strong')?.textContent.trim() || '';
+  const price = priceText.startsWith('$') ? priceText : priceText ? `$${priceText}` : '';
+  return { name, nights, price };
+}
+
+function redirectToCheckout(name, price, nights) {
+  const inPagesFolder = window.location.pathname.includes('/pages/');
+  const checkoutUrl = inPagesFolder ? 'checkout.html' : 'pages/checkout.html';
+  const queryString = `?name=${encodeURIComponent(name)}&price=${encodeURIComponent(price)}&nights=${encodeURIComponent(nights)}`;
+  window.location.href = `${checkoutUrl}${queryString}`;
+}
+
+document.querySelectorAll('.book-btn, .book-btn1').forEach(button => {
+  button.addEventListener('click', () => {
+    const pkg = getPackageDetails(button);
+    if (!pkg) return;
+    redirectToCheckout(pkg.name, pkg.price, pkg.nights);
+  });
+});
+
 // ============ CONTACT FORM ============
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
@@ -141,3 +188,334 @@ document.querySelectorAll('.toggle-pass').forEach(toggle => {
     toggle.classList.toggle('fa-eye-slash', !showing);
   });
 });
+
+
+/* ==========================================
+   UNO TOURS PREMIUM REVIEWS JAVASCRIPT
+========================================== */
+
+
+/* ===============================
+   SCROLL REVEAL ANIMATION
+================================ */
+
+
+const revealElements = document.querySelectorAll(
+    ".review-card, .tour-stats, .reviews-cta"
+);
+
+
+const reviewRevealObserver = new IntersectionObserver(
+    (entries, observer)=>{
+
+
+        entries.forEach(entry=>{
+
+
+            if(entry.isIntersecting){
+
+
+                entry.target.classList.add("show");
+
+
+                observer.unobserve(entry.target);
+
+
+            }
+
+
+        });
+
+
+    },
+    {
+        threshold:0.2
+    }
+);
+
+
+
+revealElements.forEach(element=>{
+
+
+    element.classList.add("hidden");
+
+
+    reviewRevealObserver.observe(element);
+
+
+});
+
+
+
+
+
+
+/* ===============================
+   STATISTICS COUNTER ANIMATION
+================================ */
+
+
+
+const counters = document.querySelectorAll(
+    ".stat-item h3"
+);
+
+
+let counterStarted = false;
+
+
+
+const counterObserver = new IntersectionObserver(
+(entries)=>{
+
+
+entries.forEach(entry=>{
+
+
+if(entry.isIntersecting && !counterStarted){
+
+
+counterStarted = true;
+
+
+
+counters.forEach(counter=>{
+
+
+    let target = counter.innerText;
+
+
+    let number = parseInt(
+        target.replace(/\D/g,"")
+    );
+
+
+    let suffix = target.replace(
+        /[0-9]/g,
+        ""
+    );
+
+
+
+    let count = 0;
+
+
+
+    let speed = number / 80;
+
+
+
+    let updateCounter = ()=>{
+
+
+        if(count < number){
+
+
+            count += speed;
+
+
+            counter.innerText =
+            Math.ceil(count) + suffix;
+
+
+
+            setTimeout(
+                updateCounter,
+                25
+            );
+
+
+        }
+
+        else{
+
+
+            counter.innerText =
+            number + suffix;
+
+
+        }
+
+
+    };
+
+
+
+    updateCounter();
+
+
+
+});
+
+
+
+}
+
+
+
+});
+
+},
+{
+    threshold:0.5
+});
+
+
+
+
+const statsSection =
+document.querySelector(".tour-stats");
+
+
+
+if(statsSection){
+
+counterObserver.observe(statsSection);
+
+}
+
+
+
+
+
+
+
+/* ===============================
+   CARD 3D HOVER EFFECT
+================================ */
+
+
+const cards =
+document.querySelectorAll(".review-card");
+
+
+
+cards.forEach(card=>{
+
+
+card.addEventListener(
+"mousemove",
+(e)=>{
+
+
+let rect =
+card.getBoundingClientRect();
+
+
+
+let x =
+e.clientX - rect.left;
+
+
+
+let y =
+e.clientY - rect.top;
+
+
+
+let centerX =
+rect.width / 2;
+
+
+
+let centerY =
+rect.height / 2;
+
+
+
+let rotateX =
+(y-centerY) / 20;
+
+
+
+let rotateY =
+(centerX-x) / 20;
+
+
+
+card.style.transform =
+`
+perspective(1000px)
+rotateX(${rotateX}deg)
+rotateY(${rotateY}deg)
+translateY(-10px)
+`;
+
+
+
+});
+
+
+
+
+
+card.addEventListener(
+"mouseleave",
+()=>{
+
+
+card.style.transform =
+"translateY(0)";
+
+
+});
+
+
+});
+
+
+
+
+
+
+
+
+/* ===============================
+   BUTTON RIPPLE EFFECT
+================================ */
+
+
+
+const button =
+document.querySelector(".cta-button");
+
+
+
+if(button){
+
+
+button.addEventListener(
+"click",
+function(e){
+
+
+let ripple =
+document.createElement("span");
+
+
+
+ripple.classList.add(
+"ripple"
+);
+
+
+
+this.appendChild(ripple);
+
+
+
+setTimeout(()=>{
+
+
+ripple.remove();
+
+
+},600);
+
+
+
+});
+
+
+}

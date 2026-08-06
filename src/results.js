@@ -92,9 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Checkout page
   if (window.location.pathname.includes("checkout.html")) {
     const params = new URLSearchParams(window.location.search);
-    const name = params.get("name");
-    const price = params.get("price");
-    const nights = params.get("nights");
+    const name = params.get("name") || "Selected package";
+    const price = params.get("price") || "Contact us for a quote";
+    const nights = params.get("nights") || "Tailored itinerary";
 
     const checkoutDiv = document.getElementById("checkout");
     checkoutDiv.innerHTML = `
@@ -113,8 +113,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("bookingForm").addEventListener("submit", (e) => {
       e.preventDefault();
-      window.location.href = "thankyou.html";
+      const customerName = document.getElementById("custName")?.value.trim() || "traveler";
+      const thankYouParams = new URLSearchParams({
+        name,
+        price,
+        nights,
+        customer: customerName
+      });
+
+      alert(`Booking confirmed for ${customerName}! We’ll send your itinerary details shortly.`);
+      window.location.href = `thankyou.html?${thankYouParams.toString()}`;
     });
+  }
+
+  // Thank you page
+  if (window.location.pathname.includes("thankyou.html")) {
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name") || "your selected package";
+    const price = params.get("price") || "Contact us for a quote";
+    const nights = params.get("nights") || "Tailored itinerary";
+    const customer = params.get("customer") || "traveler";
+
+    const thankyouDiv = document.getElementById("thankyou");
+    if (thankyouDiv) {
+      thankyouDiv.innerHTML = `
+        <div class="confirmation-card">
+          <p class="confirmation-badge">Booking Confirmed</p>
+          <h2>Thank you, ${customer}!</h2>
+          <p>Your request for <strong>${name}</strong> has been received.</p>
+          <div class="summary-box">
+            <p><strong>Package:</strong> ${name}</p>
+            <p><strong>Duration:</strong> ${nights}</p>
+            <p><strong>Price:</strong> ${price}</p>
+          </div>
+          <p>We’ll contact you shortly with your itinerary and next steps.</p>
+          <a href="../index.html" class="back-home">Return to Home</a>
+        </div>
+      `;
+    }
   }
 });
 
