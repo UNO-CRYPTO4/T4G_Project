@@ -383,6 +383,33 @@ h1, h2, h3 {
 }
 
 /* =========================================================
+   Stamps — entrance + counting animation
+   ========================================================= */
+.stamp {
+  opacity: 0;
+  transform: rotate(-3deg) scale(1.6);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.stamp:nth-child(2n) { transform: rotate(2.5deg) scale(1.6); }
+
+.stamp.is-visible {
+  opacity: 1;
+  transform: rotate(-3deg) scale(1);
+}
+.stamp.is-visible:nth-child(2n) {
+  transform: rotate(2.5deg) scale(1);
+}
+
+.stamps-inner .stamp:nth-child(1) { transition-delay: 0s; }
+.stamps-inner .stamp:nth-child(2) { transition-delay: 0.15s; }
+.stamps-inner .stamp:nth-child(3) { transition-delay: 0.3s; }
+.stamps-inner .stamp:nth-child(4) { transition-delay: 0.45s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .stamp { opacity: 1; transform: none; transition: none; }
+}
+
+/* =========================================================
    Rating breakdown
    ========================================================= */
 .ledger-summary { padding: 3.5rem 1.25rem; }
@@ -589,8 +616,10 @@ h1, h2, h3 {
   justify-content: center;
   align-items: center;
   gap: 2rem 2.5rem;
+
 }
-.press .img-placeholder--logo { filter: grayscale(1); opacity: 0.75; overflow: hidden;}
+.press .img-placeholder--logo { opacity: 0.75; transition: opacity 0.3s ease;}
+.press .img-placeholder--logo:hover { opacity: 1; }
 
 /* =========================================================
    CTA

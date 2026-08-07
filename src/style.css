@@ -495,6 +495,25 @@ background-color: var(--cream);
 }
 .center-tag { font-size: 0.7rem; color: var(--maroon-800); }
 
+.cta-btn-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.cta-button-outline {
+  background: transparent;
+  border: 1.5px solid #c9a227; /* match your gold accent color */
+  color: #c9a227;
+}
+
+.cta-button-outline:hover {
+  background: #c9a227;
+  color: #1a1a1a; /* or your dark bg color */
+}
+
 /* ============ FOOTER ============ */
 .site-footer {
   position: relative;
@@ -2073,6 +2092,9 @@ margin-top: 150px;
   
 }
 .book-btn1:hover { background: var(--gold-dark); }
+
+
+
 
 
 

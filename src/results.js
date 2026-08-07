@@ -164,3 +164,93 @@ function redirectToCheckout(name, price, nights) {
   const queryString = `?name=${encodeURIComponent(name)}&price=${encodeURIComponent(price)}&nights=${encodeURIComponent(nights)}`;
   window.location.href = "checkout.html" + queryString;
 }
+
+
+
+// Animated stat counters + entrance for the Guest Ledger stamps strip
+(function () {
+  const stamps = document.querySelectorAll('.stamp');
+  if (!stamps.length) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const easeOutQuad = t => t * (2 - t);
+
+  function animateCount(el, target, duration = 1200) {
+    if (prefersReducedMotion) {
+      el.textContent = target.toLocaleString();
+      return;
+    }
+    const start = performance.now();
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      el.textContent = Math.floor(easeOutQuad(progress) * target).toLocaleString();
+      if (progress < 1) requestAnimationFrame(tick);
+      else el.textContent = target.toLocaleString();
+    }
+    requestAnimationFrame(tick);
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const stamp = entry.target;
+      stamp.classList.add('is-visible');
+
+      const counter = stamp.querySelector('.count');
+      if (counter && !counter.dataset.done) {
+        counter.dataset.done = 'true';
+        animateCount(counter, parseInt(counter.dataset.target, 10));
+      }
+      obs.unobserve(stamp);
+    });
+  }, { threshold: 0.4 });
+
+  stamps.forEach(stamp => observer.observe(stamp));
+})();
+
+
+
+(function () {
+  const grid = document.getElementById('toursGrid');
+  const emptyState = document.getElementById('toursEmptyState');
+  const searchBtn = document.getElementById('toursSearchBtn');
+  if (!grid) return;
+
+  const destSelect = document.getElementById('filterDestination');
+  const typeSelect = document.getElementById('filterType');
+  const durationSelect = document.getElementById('filterDuration');
+  const budgetSelect = document.getElementById('filterBudget');
+
+  function applyFilters() {
+    const dest = destSelect.value;
+    const type = typeSelect.value;
+    const duration = durationSelect.value;
+    const budget = budgetSelect.value;
+
+    const cards = grid.querySelectorAll('.tour-card');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const matches =
+        (dest === 'all' || card.dataset.destination === dest) &&
+        (type === 'all' || card.dataset.type === type) &&
+        (duration === 'all' || card.dataset.duration === duration) &&
+        (budget === 'all' || card.dataset.budget === budget);
+
+      card.style.display = matches ? '' : 'none';
+      if (matches) visibleCount++;
+    });
+
+    if (emptyState) {
+      emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+  }
+
+  [destSelect, typeSelect, durationSelect, budgetSelect].forEach(select => {
+    if (select) select.addEventListener('change', applyFilters);
+  });
+
+  if (searchBtn) {
+    searchBtn.addEventListener('click', applyFilters);
+  }
+})();
