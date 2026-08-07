@@ -161,8 +161,10 @@ function redirectToResults({ destination, travelers, checkin, checkout }) {
 }
 
 function redirectToCheckout(name, price, nights) {
+  const inPagesFolder = window.location.pathname.includes('/pages/');
+  const checkoutUrl = inPagesFolder ? 'checkout.html' : 'pages/checkout.html';
   const queryString = `?name=${encodeURIComponent(name)}&price=${encodeURIComponent(price)}&nights=${encodeURIComponent(nights)}`;
-  window.location.href = "checkout.html" + queryString;
+  window.location.href = `${checkoutUrl}${queryString}`;
 }
 
 
@@ -564,3 +566,68 @@ function showSuccess() {
     }, 3200);
 
 }
+
+/* ===========================================
+   TRUST STAMPS ANIMATION
+=========================================== */
+
+const stamps = document.querySelectorAll(".stamp");
+
+if (stamps.length) {
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("is-visible");
+
+            }
+
+        });
+
+    }, {
+
+        threshold: 0.3
+
+    });
+
+    stamps.forEach(stamp => observer.observe(stamp));
+
+}
+
+const counters = document.querySelectorAll(".count");
+
+counters.forEach(counter => {
+
+    const updateCounter = () => {
+
+        const target = +counter.dataset.target;
+        const current = +counter.innerText;
+
+        const increment = Math.ceil(target / 80);
+
+        if (current < target) {
+
+            counter.innerText = Math.min(current + increment, target);
+
+            requestAnimationFrame(updateCounter);
+
+        }
+
+    };
+
+    updateCounter();
+
+});
+
+if (openBtn && modal) {
+    // modal code
+}
+
+if (form) {
+    // review form code
+}
+
+
