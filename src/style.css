@@ -36,14 +36,26 @@ a { text-decoration: none; color: inherit; }
 button { font-family: inherit; cursor: pointer; border: none; }
 
 /* ============ HEADER ============ */
-.site-header {
+  .site-header {
   position: relative;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 12px rgba(44, 17, 9, 0.08);
-  background-image: url(../images/Free\ Summer\ Presets\ to\ Transform\ Your\ Beach\ Photos\ –\ Download\ Now!.jfif);
-  
+  background: none; /* remove direct background image */
 }
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/Free Summer Presets to Transform Your Beach Photos – Download Now!.jfif");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust transparency here */
+  z-index: -1; /* keep it behind the content */
+}
+
+
 
 .nav-wrap {
   position: relative;
@@ -72,6 +84,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
   justify-content: center;
   flex-shrink: 0;
   overflow: hidden;
+  
 }
 
 

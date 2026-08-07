@@ -156,8 +156,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Helpers
 function redirectToResults({ destination, travelers, checkin, checkout }) {
+  const inPagesFolder = window.location.pathname.includes('/pages/');
+  const resultsUrl = inPagesFolder ? 'results.html' : 'pages/results.html';
   const queryString = `?destination=${encodeURIComponent(destination || "")}&travelers=${encodeURIComponent(travelers || "")}&checkin=${checkin || ""}&checkout=${checkout || ""}`;
-  window.location.href = "results.html" + queryString;
+  window.location.href = `${resultsUrl}${queryString}`;
 }
 
 function redirectToCheckout(name, price, nights) {
@@ -218,38 +220,121 @@ function redirectToCheckout(name, price, nights) {
 =========================================== */
 
 const modal = document.getElementById("reviewModal");
-
 const openBtn = document.getElementById("openReviewModal");
-
 const closeBtn = document.getElementById("closeReviewModal");
-
 const form = document.getElementById("reviewForm");
-
 const stars = document.querySelectorAll(".star-rating span");
-
 const ratingInput = document.getElementById("selectedRating");
-
 const previewImage = document.getElementById("previewImage");
-
 const imageInput = document.getElementById("reviewImage");
-
 const postcardGrid = document.querySelector(".postcard-grid");
 
-
-
-/* ===========================================
-            OPEN MODAL
-=========================================== */
-
-openBtn.addEventListener("click", () => {
-
+if (modal && openBtn && closeBtn && form && stars.length > 0 && ratingInput && previewImage && imageInput && postcardGrid) {
+  /* ===========================================
+              OPEN MODAL
+  =========================================== */
+  openBtn.addEventListener("click", () => {
     modal.classList.add("active");
-
     document.body.style.overflow = "hidden";
+  });
 
-});
+  /* ===========================================
+              CLOSE MODAL
+  =========================================== */
+  function closeModal() {
+    modal.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+
+  closeBtn.addEventListener("click", closeModal);
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  /* ===========================================
+              STAR RATING
+  =========================================== */
+  stars.forEach(star => {
+    star.addEventListener("click", () => {
+      const rating = star.dataset.rating;
+      ratingInput.value = rating;
+      stars.forEach(s => s.classList.remove("active"));
+      for (let i = 0; i < rating; i++) {
+        stars[i].classList.add("active");
+      }
+    });
+  });
+
+  /* ===========================================
+              IMAGE PREVIEW
+  =========================================== */
+  imageInput.addEventListener("change", function () {
+    const file = this.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      previewImage.src = e.target.result;
+      previewImage.style.display = "block";
+    };
+    reader.readAsDataURL(file);
+  });
+
+  /* ===========================================
+              SUBMIT REVIEW
+  =========================================== */
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("travelerName").value.trim();
+    const destination = document.getElementById("destination").value.trim();
+    const title = document.getElementById("reviewTitle").value.trim();
+    const review = document.getElementById("reviewText").value.trim();
+    const date = document.getElementById("travelDate").value;
+    const rating = ratingInput.value;
+
+    if (!rating) {
+      alert("Please select a rating.");
+      return;
+    }
+
+    if (review.length < 40) {
+      alert("Please write a longer review.");
+      return;
+    }
+
+    let starsHTML = "";
+    for (let i = 0; i < rating; i++) {
+      starsHTML += "★";
+    }
+    for (let i = rating; i < 5; i++) {
+      starsHTML += "☆";
+    }
+
+    let image = "";
+    if (previewImage.src !== "") {
+      image = previewImage.src;
+    }
+
+    const card = document.createElement("article");
+    card.className = "postcard";
+    card.innerHTML = `
+        <div class="postcard-photo">
+            <div class="img-placeholder img-placeholder--sq">`;
+    postcardGrid.appendChild(card);
+    closeModal();
+    form.reset();
+    previewImage.src = "";
+    previewImage.style.display = "none";
+    alert("Thank you! Your review has been submitted.");
+  });
+}
 
 
+
+if (modal && openBtn && closeBtn && form && stars.length > 0 && ratingInput && previewImage && imageInput && postcardGrid) {
 
 /* ===========================================
             CLOSE MODAL
@@ -630,4 +715,4 @@ if (form) {
     // review form code
 }
 
-
+}
