@@ -689,3 +689,633 @@ h1, h2, h3 {
   flex-shrink: 0;
   overflow: hidden;
 }
+
+
+/* ===================================================
+        UNO TOURS VINTAGE REVIEW MODAL
+=================================================== */
+
+.review-modal{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+
+    background:rgba(0,0,0,.65);
+
+    backdrop-filter:blur(8px);
+
+    z-index:9999;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.4s ease;
+
+}
+
+
+/* Active */
+
+.review-modal.active{
+
+    opacity:1;
+    visibility:visible;
+
+}
+
+
+
+/* =======================================
+            PAPER
+======================================= */
+
+.review-paper{
+
+    position:relative;
+
+    width:min(850px,100%);
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    padding:60px;
+
+    border-radius:18px;
+
+    border:3px solid #b9975b;
+
+    background:
+    linear-gradient(
+    rgba(255,255,255,.18),
+    rgba(255,255,255,.18)),
+    #f8f1e4;
+
+    box-shadow:
+
+    0 40px 90px rgba(0,0,0,.35),
+
+    inset 0 0 0 2px rgba(92,71,33,.15);
+
+}
+
+
+
+/* Paper Texture */
+
+.review-paper::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    radial-gradient(circle,rgba(0,0,0,.02) 1px,transparent 1px);
+
+    background-size:8px 8px;
+
+    opacity:.5;
+
+    pointer-events:none;
+
+}
+
+
+
+/* =======================================
+            CLOSE BUTTON
+======================================= */
+
+.close-review{
+
+    position:absolute;
+
+    top:18px;
+
+    right:22px;
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:#23453b;
+
+    color:#fff;
+
+    font-size:24px;
+
+    transition:.3s;
+
+}
+
+
+.close-review:hover{
+
+    background:#b9975b;
+
+    transform:rotate(90deg);
+
+}
+
+
+
+/* =======================================
+            HEADER
+======================================= */
+
+.ledger-header-modal{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+
+.ledger-small{
+
+    font-family:"Special Elite",cursive;
+
+    letter-spacing:2px;
+
+    color:#7b5b2b;
+
+    font-size:.9rem;
+
+}
+
+
+.ledger-header-modal h2{
+
+    margin-top:12px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:3.2rem;
+
+    color:#18342f;
+
+}
+
+
+.ledger-subtitle{
+
+    max-width:600px;
+
+    margin:auto;
+
+    margin-top:15px;
+
+    color:#666;
+
+    line-height:1.7;
+
+    font-family:"Lora",serif;
+
+}
+
+
+
+/* =======================================
+            FORM
+======================================= */
+
+#reviewForm{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+
+.form-group label{
+
+    font-family:"Special Elite",cursive;
+
+    color:#4f422d;
+
+    letter-spacing:1px;
+
+    font-size:.92rem;
+
+}
+
+
+
+/* =======================================
+            INPUTS
+======================================= */
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border:2px solid rgba(0,0,0,.12);
+
+    background:#fffdf8;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-family:"Lora",serif;
+
+    transition:.3s;
+
+}
+
+
+textarea{
+
+    resize:vertical;
+
+    min-height:180px;
+
+}
+
+
+input:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:#b9975b;
+
+    box-shadow:
+
+    0 0 0 4px rgba(185,151,91,.15);
+
+}
+
+
+
+/* =======================================
+        TWO COLUMN LAYOUT
+======================================= */
+
+.double-input{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+}
+
+
+
+/* =======================================
+            STARS
+======================================= */
+
+.star-rating{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+
+.star-rating span{
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+    color:#d5c7a8;
+
+    transition:.25s;
+
+}
+
+
+.star-rating span:hover{
+
+    color:#d7a93d;
+
+    transform:scale(1.2);
+
+}
+
+
+.star-rating span.active{
+
+    color:#d7a93d;
+
+}
+
+
+
+/* =======================================
+        UPLOAD BOX
+======================================= */
+
+.upload-box{
+
+    cursor:pointer;
+
+}
+
+
+.upload-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    gap:10px;
+
+    min-height:220px;
+
+    border:3px dashed #b9975b;
+
+    border-radius:18px;
+
+    background:#fffaf1;
+
+    transition:.3s;
+
+}
+
+
+.upload-content:hover{
+
+    background:#f5ead5;
+
+    border-color:#23453b;
+
+}
+
+
+.upload-icon{
+
+    font-size:3rem;
+
+}
+
+
+.upload-content p{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:1.4rem;
+
+    color:#18342f;
+
+}
+
+
+.upload-content small{
+
+    color:#777;
+
+}
+
+
+
+/* =======================================
+            IMAGE PREVIEW
+======================================= */
+
+.preview-image{
+
+    display:none;
+
+    width:100%;
+
+    max-height:350px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    margin-top:18px;
+
+    border:3px solid #b9975b;
+
+}
+
+
+
+/* =======================================
+            SUBMIT
+======================================= */
+
+.submit-review{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    font-size:1rem;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    font-family:"Special Elite",cursive;
+
+    background:#23453b;
+
+    color:#fff;
+
+    transition:.35s;
+
+}
+
+
+.submit-review:hover{
+
+    background:#b9975b;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+    0 15px 30px rgba(0,0,0,.18);
+
+}
+
+
+
+/* =======================================
+        SCROLLBAR
+======================================= */
+
+.review-paper::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+.review-paper::-webkit-scrollbar-thumb{
+
+    background:#b9975b;
+
+    border-radius:20px;
+
+}
+
+
+.review-paper::-webkit-scrollbar-track{
+
+    background:#efe3cb;
+
+}
+
+
+
+/* =======================================
+        MOBILE
+======================================= */
+
+@media(max-width:768px){
+
+.review-paper{
+
+padding:35px 25px;
+
+}
+
+.double-input{
+
+grid-template-columns:1fr;
+
+}
+
+.ledger-header-modal h2{
+
+font-size:2.3rem;
+
+}
+
+.upload-content{
+
+min-height:180px;
+
+}
+
+.star-rating{
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+}
+
+/* ==========================
+      SUCCESS POPUP
+========================== */
+
+.review-success{
+
+position:fixed;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%) scale(.8);
+
+background:#23453b;
+
+color:#fff;
+
+padding:40px 60px;
+
+border-radius:18px;
+
+text-align:center;
+
+z-index:10000;
+
+opacity:0;
+
+transition:.4s;
+
+box-shadow:0 20px 60px rgba(0,0,0,.3);
+
+border:4px solid #b9975b;
+
+}
+
+.review-success.show{
+
+opacity:1;
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+.review-success h2{
+
+font-size:4rem;
+
+margin-bottom:10px;
+
+color:#d7a93d;
+
+}
+
+.review-success h3{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:2rem;
+
+margin-bottom:10px;
+
+}
+
+.review-success p{
+
+font-family:"Lora",serif;
+
+}

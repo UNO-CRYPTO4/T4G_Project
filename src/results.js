@@ -166,50 +166,6 @@ function redirectToCheckout(name, price, nights) {
 }
 
 
-
-// Animated stat counters + entrance for the Guest Ledger stamps strip
-(function () {
-  const stamps = document.querySelectorAll('.stamp');
-  if (!stamps.length) return;
-
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const easeOutQuad = t => t * (2 - t);
-
-  function animateCount(el, target, duration = 1200) {
-    if (prefersReducedMotion) {
-      el.textContent = target.toLocaleString();
-      return;
-    }
-    const start = performance.now();
-    function tick(now) {
-      const progress = Math.min((now - start) / duration, 1);
-      el.textContent = Math.floor(easeOutQuad(progress) * target).toLocaleString();
-      if (progress < 1) requestAnimationFrame(tick);
-      else el.textContent = target.toLocaleString();
-    }
-    requestAnimationFrame(tick);
-  }
-
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const stamp = entry.target;
-      stamp.classList.add('is-visible');
-
-      const counter = stamp.querySelector('.count');
-      if (counter && !counter.dataset.done) {
-        counter.dataset.done = 'true';
-        animateCount(counter, parseInt(counter.dataset.target, 10));
-      }
-      obs.unobserve(stamp);
-    });
-  }, { threshold: 0.4 });
-
-  stamps.forEach(stamp => observer.observe(stamp));
-})();
-
-
-
 (function () {
   const grid = document.getElementById('toursGrid');
   const emptyState = document.getElementById('toursEmptyState');
@@ -254,3 +210,357 @@ function redirectToCheckout(name, price, nights) {
     searchBtn.addEventListener('click', applyFilters);
   }
 })();
+
+/* ===========================================
+        UNO TOURS REVIEW SYSTEM
+=========================================== */
+
+const modal = document.getElementById("reviewModal");
+
+const openBtn = document.getElementById("openReviewModal");
+
+const closeBtn = document.getElementById("closeReviewModal");
+
+const form = document.getElementById("reviewForm");
+
+const stars = document.querySelectorAll(".star-rating span");
+
+const ratingInput = document.getElementById("selectedRating");
+
+const previewImage = document.getElementById("previewImage");
+
+const imageInput = document.getElementById("reviewImage");
+
+const postcardGrid = document.querySelector(".postcard-grid");
+
+
+
+/* ===========================================
+            OPEN MODAL
+=========================================== */
+
+openBtn.addEventListener("click", () => {
+
+    modal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+
+});
+
+
+
+/* ===========================================
+            CLOSE MODAL
+=========================================== */
+
+function closeModal() {
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow = "auto";
+
+}
+
+closeBtn.addEventListener("click", closeModal);
+
+
+
+window.addEventListener("click", (e) => {
+
+    if (e.target === modal) {
+
+        closeModal();
+
+    }
+
+});
+
+
+
+/* ===========================================
+            STAR RATING
+=========================================== */
+
+stars.forEach(star => {
+
+    star.addEventListener("click", () => {
+
+        const rating = star.dataset.rating;
+
+        ratingInput.value = rating;
+
+        stars.forEach(s => {
+
+            s.classList.remove("active");
+
+        });
+
+        for (let i = 0; i < rating; i++) {
+
+            stars[i].classList.add("active");
+
+        }
+
+    });
+
+});
+
+
+
+/* ===========================================
+            IMAGE PREVIEW
+=========================================== */
+
+imageInput.addEventListener("change", function () {
+
+    const file = this.files[0];
+
+    if (!file) return;
+
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+
+        previewImage.src = e.target.result;
+
+        previewImage.style.display = "block";
+
+    };
+
+    reader.readAsDataURL(file);
+
+});
+
+
+
+/* ===========================================
+            SUBMIT REVIEW
+=========================================== */
+
+form.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+
+
+    const name = document.getElementById("travelerName").value.trim();
+
+    const destination = document.getElementById("destination").value.trim();
+
+    const title = document.getElementById("reviewTitle").value.trim();
+
+    const review = document.getElementById("reviewText").value.trim();
+
+    const date = document.getElementById("travelDate").value;
+
+    const rating = ratingInput.value;
+
+
+
+    if (!rating) {
+
+        alert("Please select a rating.");
+
+        return;
+
+    }
+
+
+
+    if (review.length < 40) {
+
+        alert("Please write a longer review.");
+
+        return;
+
+    }
+
+
+
+    let starsHTML = "";
+
+    for (let i = 0; i < rating; i++) {
+
+        starsHTML += "★";
+
+    }
+
+    for (let i = rating; i < 5; i++) {
+
+        starsHTML += "☆";
+
+    }
+
+
+
+    let image = "";
+
+
+
+    if (previewImage.src !== "") {
+
+        image = previewImage.src;
+
+    }
+
+
+
+    const card = document.createElement("article");
+
+    card.className = "postcard";
+
+
+
+    card.innerHTML = `
+
+        <div class="postcard-photo">
+
+            <div class="img-placeholder img-placeholder--sq">
+
+                <img src="${image}" alt="${name}">
+
+            </div>
+
+            <span class="seal">
+
+                ${starsHTML}
+
+            </span>
+
+        </div>
+
+        <blockquote>
+
+            <h3 style="margin-bottom:10px;font-family:'Cormorant Garamond';color:#1d3c35;">
+
+                ${title}
+
+            </h3>
+
+            <p>"${review}"</p>
+
+        </blockquote>
+
+        <footer>
+
+            <span class="signature">
+
+                ${name}
+
+            </span>
+
+            <span class="postmark">
+
+                ${destination} · ${date}
+
+            </span>
+
+        </footer>
+
+    `;
+
+
+
+    postcardGrid.prepend(card);
+
+
+
+    closeModal();
+
+
+
+    showSuccess();
+
+
+
+    form.reset();
+
+
+
+    previewImage.style.display = "none";
+
+
+
+    ratingInput.value = "";
+
+
+
+    stars.forEach(star => {
+
+        star.classList.remove("active");
+
+    });
+
+
+
+    card.scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "center"
+
+    });
+
+});
+
+
+
+/* ===========================================
+        SUCCESS MESSAGE
+=========================================== */
+
+function showSuccess() {
+
+    const success = document.createElement("div");
+
+
+
+    success.className = "review-success";
+
+
+
+    success.innerHTML = `
+
+        <h2>✓</h2>
+
+        <h3>Stamped Into The Guest Ledger</h3>
+
+        <p>
+
+            Thank you for sharing your unforgettable journey.
+
+        </p>
+
+    `;
+
+
+
+    document.body.appendChild(success);
+
+
+
+    setTimeout(() => {
+
+        success.classList.add("show");
+
+    }, 50);
+
+
+
+    setTimeout(() => {
+
+        success.classList.remove("show");
+
+
+
+        setTimeout(() => {
+
+            success.remove();
+
+        }, 400);
+
+
+
+    }, 3200);
+
+}

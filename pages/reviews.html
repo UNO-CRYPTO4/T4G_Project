@@ -225,7 +225,9 @@
       <p class="eyebrow">Your Turn</p>
       <h2>Add Your Voyage<br>to the Ledger</h2>
       <p class="cta-sub">Traveled with us? We'd be glad to stamp your story into the book.</p>
-      <a href="#" class="btn btn-solid">Write a Review</a>
+      <button class="btn btn-solid review-btn" id="openReviewModal">
+    Write a Review
+</button>
     </div>
   </section>
 
@@ -236,6 +238,247 @@
   <p class="footer-tagline">Travel. Explore. Live.</p>
   <p class="footer-fine">&copy; 2026 Uno Tours. All voyages curated with care.</p>
 </footer>
+
+<!-- ==========================================
+        UNO TOURS VINTAGE REVIEW MODAL
+===========================================-->
+
+<div class="review-modal" id="reviewModal">
+
+    <div class="review-paper">
+
+        <!-- Close Button -->
+
+        <button class="close-review" id="closeReviewModal">
+            &times;
+        </button>
+
+
+        <!-- Header -->
+
+        <div class="ledger-header-modal">
+
+            <p class="ledger-small">
+                UNO TOURS • THE GUEST LEDGER
+            </p>
+
+            <h2>Add Your Voyage</h2>
+
+            <p class="ledger-subtitle">
+                Every unforgettable journey deserves a page in our Guest Ledger.
+            </p>
+
+        </div>
+
+
+        <!-- Form -->
+
+        <form id="reviewForm">
+
+            <!-- Name -->
+
+            <div class="form-group">
+
+                <label>Traveler Name</label>
+
+                <input
+                    type="text"
+                    id="travelerName"
+                    placeholder="Your Full Name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="form-group">
+
+                <label>Email Address</label>
+
+                <input
+                    type="email"
+                    id="travelerEmail"
+                    placeholder="example@email.com"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Destination -->
+
+            <div class="double-input">
+
+                <div class="form-group">
+
+                    <label>Destination</label>
+
+                    <input
+                        type="text"
+                        id="destination"
+                        placeholder="Santorini"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Tour Package</label>
+
+                    <input
+                        type="text"
+                        id="tourPackage"
+                        placeholder="Luxury Escape"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Date -->
+
+            <div class="form-group">
+
+                <label>Date of Travel</label>
+
+                <input
+                    type="date"
+                    id="travelDate"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- Rating -->
+
+            <div class="form-group">
+
+                <label>Rate Your Journey</label>
+
+                <div class="star-rating">
+
+                    <span data-rating="1">★</span>
+                    <span data-rating="2">★</span>
+                    <span data-rating="3">★</span>
+                    <span data-rating="4">★</span>
+                    <span data-rating="5">★</span>
+
+                </div>
+
+                <input
+                    type="hidden"
+                    id="selectedRating"
+                    value=""
+                >
+
+            </div>
+
+
+
+            <!-- Title -->
+
+            <div class="form-group">
+
+                <label>Story Title</label>
+
+                <input
+                    type="text"
+                    id="reviewTitle"
+                    placeholder="A journey I'll never forget..."
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- Review -->
+
+            <div class="form-group">
+
+                <label>Your Story</label>
+
+                <textarea
+                    id="reviewText"
+                    rows="7"
+                    placeholder="Tell future travelers about your experience..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- Upload -->
+
+            <div class="form-group">
+
+                <label>Travel Memory</label>
+
+                <label class="upload-box">
+
+                    <input
+                        type="file"
+                        id="reviewImage"
+                        accept="image/*"
+                        hidden
+                    >
+
+                    <div class="upload-content">
+
+                        <div class="upload-icon">
+
+                            📷
+
+                        </div>
+
+                        <p>
+                            Click to upload your favorite travel photo
+                        </p>
+
+                        <small>
+                            JPG • PNG • WEBP
+                        </small>
+
+                    </div>
+
+                </label>
+
+                <img
+                    id="previewImage"
+                    src=""
+                    alt=""
+                    class="preview-image"
+                >
+
+            </div>
+
+
+
+            <!-- Submit -->
+
+            <button
+                class="submit-review"
+                type="submit"
+            >
+
+                Stamp My Story
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
 <script src="../src/results.js"></script>
 </body>
 </html>
