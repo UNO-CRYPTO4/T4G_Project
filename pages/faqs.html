@@ -1,95 +1,808 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 <title>FAQs | Uno Tours</title>
-<script src="https://kit.fontawesome.com/8782f58de9.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="../src/style.css">
+
+<!-- Font Awesome -->
+<script
+    src="https://kit.fontawesome.com/8782f58de9.js"
+    crossorigin="anonymous">
+</script>
+
+<!-- Main Uno Tours stylesheet -->
+<link rel="stylesheet" href="../src/style.css?v=20260810">
+<link rel="stylesheet" href="../src/help&support.css">
+
+
 </head>
+
 <body>
 
-<header class="site-header">
-  <div class="nav-wrap">
-    <a href="../index.html" class="logo">
-      <div class="logo-badge">
-        <svg viewBox="0 0 24 24" class="logo-icon"><img src="../images/WhatsApp Image 2026-07-07 at 12.04.15 PM.jpeg" alt=""></svg>
-      </div>
-      <div class="logo-text">
-        <span class="logo-title">UNO TOURS</span>
-        <span class="logo-tag">Travel. Explore. Live.</span>
-      </div>
-    </a>
-    <nav class="main-nav">
-      <a href="../index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="destination.html">Destination</a>
-      <a href="tours.html">Tours</a>
-      <a href="contact.html">Contact</a>
-      <a href="login.html" class="nav-login">Login</a>
-      <a href="signup.html" class="nav-signup">Sign Up</a>
-    </nav>
-  </div>
+
+<!-- =========================================================
+     HEADER
+========================================================== -->
+
+<header class="site-header9" id="siteHeader">
+
+    <div class="nav-wrap">
+
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+
+            <div class="logo-badge">
+                <img
+                    src="../images/WhatsApp Image 2026-07-07 at 12.04.15 PM.jpeg"
+                    alt="Uno Tours logo">
+            </div>
+
+            <div class="logo-text">
+                <span class="logo-title">UNO TOURS</span>
+                <span class="logo-tag">Travel. Explore. Live.</span>
+            </div>
+
+        </a>
+
+
+        <!-- Mobile Menu Button -->
+        <button
+            class="nav-toggle"
+            id="navToggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <!-- Navigation -->
+        <nav class="main-nav" id="mainNav">
+
+            <a href="../index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="destination.html">Destination</a>
+
+            <a href="tours.html">Tours</a>
+
+            <a href="contact.html">Contact</a>
+
+            <a href="login.html" class="nav-login">
+                Login
+            </a>
+
+            <a href="signup.html" class="nav-signup">
+                Sign Up
+            </a>
+
+        </nav>
+
+    </div>
+
 </header>
 
-<main style="max-width:900px; margin:0 auto; padding:60px 20px; color:var(--ink);">
-  <h1 style="font-family:var(--font-display); color:var(--maroon-900); margin-bottom:24px;">Frequently Asked Questions</h1>
 
-  <div style="margin-bottom:20px;">
-    <h3 style="color:var(--maroon-800); margin-bottom:6px;">How do I book a tour package?</h3>
-    <p>Select a package from our Tours page, choose your travel dates, and click "Book Now" to complete your reservation.</p>
-  </div>
+<!-- =========================================================
+     FAQ HERO
+========================================================== -->
 
-  <div style="margin-bottom:20px;">
-    <h3 style="color:var(--maroon-800); margin-bottom:6px;">What is your cancellation policy?</h3>
-    <p>You can cancel or reschedule up to 14 days before departure for a full refund. See our Terms & Conditions for details.</p>
-  </div>
+<section class="support-hero">
 
-  <div style="margin-bottom:20px;">
-    <h3 style="color:var(--maroon-800); margin-bottom:6px;">Do prices include flights?</h3>
-    <p>Package prices listed are per person and cover accommodation and select activities. Flights can be added during checkout.</p>
-  </div>
+    <div class="support-hero-overlay"></div>
 
-  <div style="margin-bottom:20px;">
-    <h3 style="color:var(--maroon-800); margin-bottom:6px;">How can I contact support?</h3>
-    <p>Reach our 24/7 support team via the Contact page, by phone, or by email at unotours1@gmail.com.</p>
-  </div>
+    <div class="support-hero-content">
+
+        <span class="support-eyebrow">
+            <i class="fa-solid fa-circle-question"></i>
+            HELP &amp; SUPPORT
+        </span>
+
+        <h1>
+            Frequently Asked
+            <span>Questions</span>
+        </h1>
+
+        <p>
+            Everything you need to know before,
+            during and after your journey with Uno Tours.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FAQ CONTENT
+========================================================== -->
+
+<main class="support-page">
+
+    <section class="faq-section">
+
+        <div class="support-section-heading">
+
+            <span class="support-section-label">
+                FIND YOUR ANSWER
+            </span>
+
+            <h2>
+                How can we help?
+            </h2>
+
+            <p>
+                We've answered some of the questions travelers
+                ask us most often. Select a question to view
+                the answer.
+            </p>
+
+        </div>
+
+
+        <!-- FAQ ACCORDION -->
+        <div class="faq-list">
+
+
+            <!-- FAQ 1 -->
+            <article class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-1">
+
+                    <span class="faq-question-content">
+
+                        <span class="faq-number">
+                            01
+                        </span>
+
+                        <span>
+                            How do I book a tour package?
+                        </span>
+
+                    </span>
+
+                    <span class="faq-icon">
+                        <i class="fa-solid fa-plus"></i>
+                    </span>
+
+                </button>
+
+
+                <div
+                    class="faq-answer"
+                    id="faq-answer-1"
+                    hidden>
+
+                    <p>
+                        Select a package from our Tours page,
+                        choose your preferred travel dates,
+                        and click <strong>"Book Now"</strong>
+                        to begin your reservation.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- FAQ 2 -->
+            <article class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-2">
+
+                    <span class="faq-question-content">
+
+                        <span class="faq-number">
+                            02
+                        </span>
+
+                        <span>
+                            What is your cancellation policy?
+                        </span>
+
+                    </span>
+
+                    <span class="faq-icon">
+                        <i class="fa-solid fa-plus"></i>
+                    </span>
+
+                </button>
+
+
+                <div
+                    class="faq-answer"
+                    id="faq-answer-2"
+                    hidden>
+
+                    <p>
+                        You can cancel or reschedule your trip
+                        up to 14 days before departure for a
+                        full refund. Please review our
+                        <a href="terms.html">
+                            Terms &amp; Conditions
+                        </a>
+                        for complete details and applicable
+                        conditions.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- FAQ 3 -->
+            <article class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-3">
+
+                    <span class="faq-question-content">
+
+                        <span class="faq-number">
+                            03
+                        </span>
+
+                        <span>
+                            Do tour prices include flights?
+                        </span>
+
+                    </span>
+
+                    <span class="faq-icon">
+                        <i class="fa-solid fa-plus"></i>
+                    </span>
+
+                </button>
+
+
+                <div
+                    class="faq-answer"
+                    id="faq-answer-3"
+                    hidden>
+
+                    <p>
+                        Package prices are listed per person
+                        and cover accommodation and selected
+                        activities. Flights are not included
+                        by default, but available flight
+                        options can be added during checkout
+                        where applicable.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- FAQ 4 -->
+            <article class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-4">
+
+                    <span class="faq-question-content">
+
+                        <span class="faq-number">
+                            04
+                        </span>
+
+                        <span>
+                            How can I contact support?
+                        </span>
+
+                    </span>
+
+                    <span class="faq-icon">
+                        <i class="fa-solid fa-plus"></i>
+                    </span>
+
+                </button>
+
+
+                <div
+                    class="faq-answer"
+                    id="faq-answer-4"
+                    hidden>
+
+                    <p>
+                        Our support team is available to assist
+                        you through our
+                        <a href="contact.html">
+                            Contact page
+                        </a>,
+                        by phone, or by email at
+                        <a href="mailto:unotours1@gmail.com">
+                            unotours1@gmail.com
+                        </a>.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- FAQ 5 -->
+            <article class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-5">
+
+                    <span class="faq-question-content">
+
+                        <span class="faq-number">
+                            05
+                        </span>
+
+                        <span>
+                            What should I bring on my trip?
+                        </span>
+
+                    </span>
+
+                    <span class="faq-icon">
+                        <i class="fa-solid fa-plus"></i>
+                    </span>
+
+                </button>
+
+
+                <div
+                    class="faq-answer"
+                    id="faq-answer-5"
+                    hidden>
+
+                    <p>
+                        We recommend carrying your passport
+                        or required travel documents, booking
+                        confirmation, appropriate clothing,
+                        medication if required, and any
+                        personal essentials you may need.
+                        Visit our
+                        <a href="traveltip.html">
+                            Travel Tips
+                        </a>
+                        page for more useful preparation advice.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- FAQ 6 -->
+            <article class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-6">
+
+                    <span class="faq-question-content">
+
+                        <span class="faq-number">
+                            06
+                        </span>
+
+                        <span>
+                            Can I change my travel dates?
+                        </span>
+
+                    </span>
+
+                    <span class="faq-icon">
+                        <i class="fa-solid fa-plus"></i>
+                    </span>
+
+                </button>
+
+
+                <div
+                    class="faq-answer"
+                    id="faq-answer-6"
+                    hidden>
+
+                    <p>
+                        Date changes may be possible depending
+                        on the package and availability.
+                        Contact our support team as early as
+                        possible so we can review your request
+                        and available alternatives.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         STILL NEED HELP
+    ====================================================== -->
+
+    <section class="support-cta">
+
+        <div class="support-cta-icon">
+
+            <i class="fa-solid fa-headset"></i>
+
+        </div>
+
+
+        <div class="support-cta-content">
+
+            <span>
+                STILL NEED HELP?
+            </span>
+
+            <h2>
+                We're here for your journey.
+            </h2>
+
+            <p>
+                Can't find the answer you're looking for?
+                Our team is ready to help you plan your
+                next adventure.
+            </p>
+
+        </div>
+
+
+        <a
+            href="contact.html"
+            class="support-cta-button">
+
+            Contact Us
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </section>
+
 </main>
 
-<footer class="site-footer">
-  <div class="footer-media">
-    <img src="../images/WhatsApp Image 2026-07-07 at 12.04.15 PM.jpeg" alt="">
-    <div class="footer-overlay"></div>
-  </div>
-  <div class="footer-content">
-    <div class="footer-col footer-brand">
-      <p class="footer-name">UNO TOURS</p>
-      <p class="footer-slogan">Travel. Explore. Live.</p>
+
+<!-- =========================================================
+     FOOTER
+========================================================== -->
+
+<footer class="site-footer9" id="contact">
+
+    <div class="footer-media">
+
+        <div class="footer-overlay"></div>
+
     </div>
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <a href="../index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="destination.html">Destination</a>
-      <a href="tours.html">Travel Packages</a>
+
+
+    <div class="footer-content">
+
+
+        <!-- BRAND -->
+        <div class="footer-col footer-brand">
+
+            <div class="logo-badge footer-badge">
+
+                <img
+                    src="../images/WhatsApp Image 2026-07-07 at 12.04.15 PM.jpeg"
+                    alt="Uno Tours logo">
+
+            </div>
+
+            <p class="footer-name">
+                UNO TOURS
+            </p>
+
+            <p class="footer-slogan">
+                Travel. Explore. Live.
+            </p>
+
+            <p class="footer-blurb">
+                We create journeys that inspire, connect
+                and leave you with memories that last a
+                lifetime.
+            </p>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+        <div class="footer-col">
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="destination.html">
+                Destination
+            </a>
+
+            <a href="tours.html">
+                Travel Packages
+            </a>
+
+        </div>
+
+
+        <!-- HELP & SUPPORT -->
+        <div class="footer-col">
+
+            <h4>
+                Help &amp; Support
+            </h4>
+
+            <a
+                href="faqs.html"
+                class="footer-active">
+                FAQs
+            </a>
+
+            <a href="traveltip.html">
+                Travel Tips
+            </a>
+
+            <a href="terms.html">
+                Terms &amp; Conditions
+            </a>
+
+            <a href="policy.html">
+                Privacy Policy
+            </a>
+
+        </div>
+
+
+        <!-- CONTACT -->
+        <div class="footer-col">
+
+            <h4>
+                Contact Us
+            </h4>
+
+            <p class="contact-line">
+
+                <i class="fa-solid fa-phone"></i>
+
+                <a href="tel:+233554327999">
+                    +233 554 327 999
+                </a>
+
+                <br>
+
+                <a href="tel:+233205447664">
+                    +233 205 447 664
+                </a>
+
+            </p>
+
+
+            <p class="contact-line">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <a href="mailto:unotours1@gmail.com">
+                    unotours1@gmail.com
+                </a>
+
+            </p>
+
+
+            <p class="contact-line">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                123 Adventure Lane
+                <br>
+                Accra, Ghana
+
+            </p>
+
+        </div>
+
     </div>
-    <div class="footer-col">
-      <h4>Help & Support</h4>
-      <a href="faqs.html">FAQs</a>
-      <a href="traveltip.html">Travel Tip</a>
-      <a href="terms.html">Terms & Conditions</a>
-      <a href="policy.html">Privacy Policy</a>
+
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+
+        <p>
+            <i class="fa-regular fa-copyright"></i>
+            2026 Uno Tours. All Rights Reserved.
+        </p>
+
+
+        <div class="footer-social">
+
+            <span>
+                Follow Us
+            </span>
+
+            <a
+                href="https://www.facebook.com/"
+                aria-label="Facebook">
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+            <a
+                href="https://www.instagram.com/"
+                aria-label="Instagram">
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+            <a
+                href="https://x.com/"
+                aria-label="X">
+
+                <i class="fa-brands fa-x-twitter"></i>
+
+            </a>
+
+            <a
+                href="https://www.tiktok.com/"
+                aria-label="TikTok">
+
+                <i class="fa-brands fa-tiktok"></i>
+
+            </a>
+
+        </div>
+
     </div>
-    <div class="footer-col">
-      <h4>Contact Us</h4>
-      <p class="contact-line"><i class="fa-solid fa-phone"></i> +233 554 327 999<br>+233 205 447 664</p>
-      <p class="contact-line"><i class="fa-solid fa-envelope"></i> unotours1@gmail.com</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 Uno Tours All Rights Reserved</p>
-  </div>
+
 </footer>
 
+
+<!-- Main JavaScript -->
+<script src="../src/script.js?v=20260810"></script>
+
+
+<!-- FAQ Accordion -->
+
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const faqButtons = document.querySelectorAll(".faq-question");
+
+    faqButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const faqItem = button.closest(".faq-item");
+            const answer = faqItem.querySelector(".faq-answer");
+            const icon = button.querySelector(".faq-icon i");
+
+            const isOpen = button.getAttribute("aria-expanded") === "true";
+
+
+            /* Close every other FAQ */
+            faqButtons.forEach(function (otherButton) {
+
+                if (otherButton !== button) {
+
+                    otherButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    const otherItem =
+                        otherButton.closest(".faq-item");
+
+                    const otherAnswer =
+                        otherItem.querySelector(".faq-answer");
+
+                    const otherIcon =
+                        otherButton.querySelector(".faq-icon i");
+
+
+                    otherAnswer.hidden = true;
+
+                    otherItem.classList.remove("is-open");
+
+                    if (otherIcon) {
+                        otherIcon.classList.remove("fa-minus");
+                        otherIcon.classList.add("fa-plus");
+                    }
+
+                }
+
+            });
+
+
+            /* Toggle the clicked FAQ */
+
+            if (isOpen) {
+
+                /* CLOSE */
+
+                button.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                answer.hidden = true;
+
+                faqItem.classList.remove("is-open");
+
+                if (icon) {
+                    icon.classList.remove("fa-minus");
+                    icon.classList.add("fa-plus");
+                }
+
+            } else {
+
+                /* OPEN */
+
+                button.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+                answer.hidden = false;
+
+                faqItem.classList.add("is-open");
+
+                if (icon) {
+                    icon.classList.remove("fa-plus");
+                    icon.classList.add("fa-minus");
+                }
+
+            }
+
+        });
+
+    });
+
+});
+</script>
+
+
+
+
 </body>
+
 </html>

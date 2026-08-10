@@ -1,0 +1,1611 @@
+/* ==========================================================
+UNO TOURS — HELP & SUPPORT / FAQ
+========================================================== */
+
+/* ----------------------------------------------------------
+SUPPORT HERO
+---------------------------------------------------------- */
+
+.support-hero {
+position: relative;
+min-height: 390px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+text-align: center;
+
+padding: 120px 7% 80px;
+
+overflow: hidden;
+
+background:
+    linear-gradient(
+        135deg,
+        var(--maroon-900),
+        var(--maroon-800)
+    );
+
+color: #ffffff;
+
+}
+
+.support-hero::before {
+content: "";
+
+position: absolute;
+inset: 0;
+
+background:
+    radial-gradient(
+        circle at 20% 30%,
+        rgba(255, 255, 255, 0.10),
+        transparent 32%
+    ),
+    radial-gradient(
+        circle at 80% 70%,
+        rgba(255, 255, 255, 0.08),
+        transparent 30%
+    );
+
+pointer-events: none;
+
+}
+
+.support-hero-overlay {
+position: absolute;
+inset: 0;
+
+background:
+    linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.08),
+        rgba(0, 0, 0, 0.20)
+    );
+
+}
+
+.support-hero-content {
+position: relative;
+z-index: 2;
+
+max-width: 800px;
+
+}
+
+.support-eyebrow {
+display: inline-flex;
+
+align-items: center;
+gap: 9px;
+
+margin-bottom: 18px;
+
+font-size: 0.78rem;
+font-weight: 700;
+
+letter-spacing: 0.18em;
+text-transform: uppercase;
+
+opacity: 0.9;
+
+}
+
+.support-eyebrow i {
+font-size: 0.95rem;
+}
+
+.support-hero h1 {
+margin: 0;
+
+font-family: var(--font-display);
+font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+line-height: 1.05;
+font-weight: 700;
+
+color: #ffffff;
+
+}
+
+.support-hero h1 span {
+display: block;
+
+font-style: italic;
+
+color: var(--cream, #f7ecd8);
+
+}
+
+.support-hero-content > p {
+max-width: 600px;
+
+margin: 22px auto 0;
+
+font-size: 1.05rem;
+line-height: 1.8;
+
+color: rgba(255, 255, 255, 0.86);
+
+}
+
+/* ----------------------------------------------------------
+SUPPORT PAGE
+---------------------------------------------------------- */
+
+.support-page {
+max-width: 1050px;
+
+margin: 0 auto;
+
+padding: 95px 24px 100px;
+
+color: var(--ink);
+
+}
+
+/* ----------------------------------------------------------
+SECTION HEADING
+---------------------------------------------------------- */
+
+.support-section-heading {
+max-width: 720px;
+
+margin: 0 auto 48px;
+
+text-align: center;
+
+}
+
+.support-section-label {
+display: inline-block;
+
+margin-bottom: 12px;
+
+color: var(--maroon-800);
+
+font-size: 0.76rem;
+font-weight: 800;
+
+letter-spacing: 0.18em;
+text-transform: uppercase;
+
+}
+
+.support-section-heading h2 {
+margin: 0 0 14px;
+
+font-family: var(--font-display);
+
+font-size: clamp(2rem, 4vw, 3rem);
+
+line-height: 1.1;
+
+color: var(--maroon-900);
+
+}
+
+.support-section-heading p {
+margin: 0 auto;
+
+max-width: 650px;
+
+font-size: 1rem;
+line-height: 1.8;
+
+color: var(--muted, #6f6861);
+
+}
+
+/* ----------------------------------------------------------
+FAQ LIST
+---------------------------------------------------------- */
+
+.faq-list {
+max-width: 900px;
+
+margin: 0 auto;
+
+}
+
+.faq-item {
+overflow: hidden;
+
+margin-bottom: 14px;
+
+border: 1px solid rgba(104, 20, 34, 0.12);
+
+border-radius: 14px;
+
+background: #ffffff;
+
+box-shadow:
+    0 8px 25px rgba(40, 20, 20, 0.05);
+
+transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+
+}
+
+.faq-item {
+border-color: rgba(104, 20, 34, 0.28);
+
+box-shadow:
+    0 12px 30px rgba(40, 20, 20, 0.08);
+
+}
+
+.faq-item.is-open {
+border-color: rgba(104, 20, 34, 0.30);
+
+box-shadow:
+    0 14px 35px rgba(40, 20, 20, 0.09);
+
+}
+
+/* ----------------------------------------------------------
+FAQ QUESTION
+---------------------------------------------------------- */
+
+.faq-question {
+width: 100%;
+
+display: flex;
+
+align-items: center;
+justify-content: space-between;
+
+gap: 24px;
+
+padding: 23px 26px;
+
+border: 0;
+
+background: transparent;
+
+color: var(--maroon-900);
+
+font: inherit;
+
+text-align: left;
+
+cursor: pointer;
+
+}
+
+.faq-question-content {
+display: flex;
+
+align-items: center;
+
+gap: 20px;
+
+font-size: 1rem;
+font-weight: 700;
+
+line-height: 1.5;
+
+}
+
+.faq-number {
+flex: 0 0 auto;
+
+font-size: 0.75rem;
+font-weight: 800;
+
+letter-spacing: 0.08em;
+
+color: var(--maroon-800);
+
+opacity: 0.65;
+
+}
+
+.faq-icon {
+flex: 0 0 36px;
+
+width: 36px;
+height: 36px;
+
+display: grid;
+place-items: center;
+
+border-radius: 50%;
+
+background: rgba(104, 20, 34, 0.08);
+
+color: var(--maroon-800);
+
+transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+
+}
+
+.faq-item.is-open .faq-icon {
+background: var(--maroon-800);
+
+color: #ffffff;
+
+transform: rotate(180deg);
+
+}
+
+.faq-icon i {
+font-size: 0.8rem;
+}
+
+/* ----------------------------------------------------------
+FAQ ANSWER
+---------------------------------------------------------- */
+
+.faq-answer {
+padding: 0 26px 25px 72px;
+}
+
+.faq-answer p {
+margin: 0;
+
+max-width: 760px;
+
+font-size: 0.96rem;
+
+line-height: 1.85;
+
+color: var(--muted, #6f6861);
+
+}
+
+.faq-answer a {
+color: var(--maroon-800);
+
+font-weight: 700;
+
+text-decoration: underline;
+
+text-underline-offset: 3px;
+
+}
+
+.faq-answer strong {
+color: var(--ink);
+}
+
+/* ----------------------------------------------------------
+SUPPORT CTA
+---------------------------------------------------------- */
+
+.support-cta {
+max-width: 900px;
+
+margin: 85px auto 0;
+
+display: grid;
+
+grid-template-columns: auto 1fr auto;
+
+align-items: center;
+
+gap: 28px;
+
+padding: 35px 38px;
+
+border-radius: 20px;
+
+background:
+    linear-gradient(
+        135deg,
+        var(--maroon-900),
+        var(--maroon-800)
+    );
+
+color: #ffffff;
+
+box-shadow:
+    0 18px 45px rgba(75, 16, 28, 0.18);
+
+}
+
+.support-cta-icon {
+width: 62px;
+height: 62px;
+
+display: grid;
+place-items: center;
+
+border-radius: 50%;
+
+background: rgba(255, 255, 255, 0.12);
+
+font-size: 1.45rem;
+
+}
+
+.support-cta-content > span {
+display: block;
+
+margin-bottom: 7px;
+
+font-size: 0.72rem;
+font-weight: 800;
+
+letter-spacing: 0.16em;
+
+}
+
+.support-cta-content h2 {
+margin: 0 0 7px;
+
+font-family: var(--font-display);
+
+font-size: 1.65rem;
+
+color: #ffffff;
+
+}
+
+.support-cta-content p {
+margin: 0;
+
+max-width: 580px;
+
+font-size: 0.92rem;
+line-height: 1.65;
+
+color: rgba(255, 255, 255, 0.78);
+
+}
+
+.support-cta-button {
+display: inline-flex;
+
+align-items: center;
+justify-content: center;
+
+gap: 10px;
+
+padding: 13px 20px;
+
+border-radius: 999px;
+
+background: #ffffff;
+
+color: var(--maroon-900);
+
+font-size: 0.88rem;
+font-weight: 800;
+
+text-decoration: none;
+
+white-space: nowrap;
+
+transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+}
+
+.support-cta-button {
+transform: translateY(-2px);
+
+box-shadow:
+    0 10px 22px rgba(0, 0, 0, 0.16);
+
+}
+
+/* ----------------------------------------------------------
+FOOTER ACTIVE LINK
+---------------------------------------------------------- */
+
+.footer-active {
+color: var(--cream, #f7ecd8) !important;
+
+font-weight: 700;
+
+}
+
+/* ----------------------------------------------------------
+   ACCESSIBILITY / FOCUS
+---------------------------------------------------------- */
+
+.faq-question:focus-visible,
+.support-cta-button:focus-visible,
+.footer-col a:focus-visible,
+.main-nav a:focus-visible,
+.nav-toggle:focus-visible {
+    outline: 3px solid rgba(104, 20, 34, 0.30);
+    outline-offset: 4px;
+}
+/* ----------------------------------------------------------
+RESPONSIVE — TABLET
+---------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+.support-page {
+    padding-top: 75px;
+    padding-bottom: 80px;
+}
+
+
+.support-cta {
+    grid-template-columns: auto 1fr;
+
+    padding: 30px;
+}
+
+
+.support-cta-button {
+    grid-column: 2;
+
+    justify-self: start;
+}
+
+}
+
+/* ----------------------------------------------------------
+RESPONSIVE — MOBILE
+---------------------------------------------------------- */
+
+@media (max-width: 640px) {
+
+.support-hero {
+    min-height: 340px;
+
+    padding:
+        110px 22px
+        65px;
+}
+
+
+.support-hero h1 {
+    font-size: 2.45rem;
+}
+
+
+.support-hero-content > p {
+    font-size: 0.94rem;
+}
+
+
+.support-page {
+    padding:
+        65px 16px
+        70px;
+}
+
+
+.support-section-heading {
+    margin-bottom: 34px;
+}
+
+
+.support-section-heading h2 {
+    font-size: 2rem;
+}
+
+
+.faq-question {
+    padding: 20px 18px;
+}
+
+
+.faq-question-content {
+    gap: 12px;
+
+    font-size: 0.92rem;
+}
+
+
+.faq-number {
+    font-size: 0.68rem;
+}
+
+
+.faq-icon {
+    flex-basis: 32px;
+
+    width: 32px;
+    height: 32px;
+}
+
+
+.faq-answer {
+    padding:
+        0 18px
+        21px
+        49px;
+}
+
+
+.faq-answer p {
+    font-size: 0.9rem;
+}
+
+
+.support-cta {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+    margin-top: 60px;
+
+    padding: 28px 22px;
+
+    text-align: center;
+}
+
+
+.support-cta-icon {
+    margin: 0 auto;
+}
+
+
+.support-cta-button {
+    grid-column: auto;
+
+    justify-self: center;
+}
+
+}
+
+/* ----------------------------------------------------------
+REDUCED MOTION
+---------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+.faq-item,
+.faq-icon,
+.support-cta-button {
+    transition: none;
+}
+
+}
+
+/* ==========================================================
+UNO TOURS — TRAVEL TIPS
+========================================================== */
+
+/* ----------------------------------------------------------
+TRAVEL TIPS HERO
+---------------------------------------------------------- */
+
+.travel-tips-hero {
+background:
+linear-gradient(
+135deg,
+var(--maroon-900),
+var(--maroon-800)
+);
+}
+
+/* ----------------------------------------------------------
+INTRODUCTION
+---------------------------------------------------------- */
+
+.travel-intro {
+max-width: 760px;
+
+
+margin: 0 auto 65px;
+
+text-align: center;
+
+
+}
+
+.travel-intro h2 {
+margin: 0 0 16px;
+
+
+font-family: var(--font-display);
+
+font-size: clamp(2rem, 4vw, 3rem);
+
+line-height: 1.15;
+
+color: var(--maroon-900);
+
+
+}
+
+.travel-intro p {
+max-width: 680px;
+
+
+margin: 0 auto;
+
+color: var(--muted, #6f6861);
+
+font-size: 1rem;
+
+line-height: 1.85;
+
+
+}
+
+/* ----------------------------------------------------------
+TRAVEL TIP GRID
+---------------------------------------------------------- */
+
+.travel-tips-grid {
+
+
+display: grid;
+
+grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+gap: 22px;
+
+max-width: 1050px;
+
+margin: 0 auto;
+
+
+}
+
+/* ----------------------------------------------------------
+TRAVEL TIP CARD
+---------------------------------------------------------- */
+
+.travel-tip-card {
+
+
+position: relative;
+
+padding: 30px 28px;
+
+border: 1px solid rgba(104, 20, 34, 0.10);
+
+border-radius: 18px;
+
+background: #ffffff;
+
+box-shadow:
+    0 8px 28px rgba(40, 20, 20, 0.05);
+
+transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+
+
+}
+
+.travel-tip-card:hover {
+
+
+transform: translateY(-6px);
+
+border-color:
+    rgba(104, 20, 34, 0.24);
+
+box-shadow:
+    0 18px 38px rgba(40, 20, 20, 0.10);
+
+
+}
+
+/* ----------------------------------------------------------
+ICON
+---------------------------------------------------------- */
+
+.travel-tip-icon {
+
+
+width: 55px;
+height: 55px;
+
+display: grid;
+
+place-items: center;
+
+margin-bottom: 22px;
+
+border-radius: 15px;
+
+background:
+    rgba(104, 20, 34, 0.08);
+
+color: var(--maroon-800);
+
+font-size: 1.25rem;
+
+
+}
+
+.travel-tip-number {
+
+
+position: absolute;
+
+top: 28px;
+right: 28px;
+
+font-size: 0.72rem;
+
+font-weight: 800;
+
+letter-spacing: 0.12em;
+
+color: var(--maroon-800);
+
+opacity: 0.40;
+
+
+}
+
+/* ----------------------------------------------------------
+CARD TYPOGRAPHY
+---------------------------------------------------------- */
+
+.travel-tip-card h3 {
+
+
+margin: 0 0 12px;
+
+font-family: var(--font-display);
+
+font-size: 1.45rem;
+
+color: var(--maroon-900);
+
+
+}
+
+.travel-tip-card p {
+
+
+margin: 0 0 20px;
+
+font-size: 0.91rem;
+
+line-height: 1.75;
+
+color: var(--muted, #6f6861);
+
+
+}
+
+/* ----------------------------------------------------------
+CARD LIST
+---------------------------------------------------------- */
+
+.travel-tip-card ul {
+
+
+display: flex;
+
+flex-direction: column;
+
+gap: 9px;
+
+margin: 0;
+
+padding: 0;
+
+list-style: none;
+
+
+}
+
+.travel-tip-card li {
+
+
+position: relative;
+
+padding-left: 19px;
+
+font-size: 0.84rem;
+
+line-height: 1.55;
+
+color: var(--ink);
+
+}
+
+.travel-tip-card li::before {
+
+
+content: "";
+
+position: absolute;
+
+left: 0;
+
+top: 0.62em;
+
+width: 6px;
+height: 6px;
+
+border-radius: 50%;
+
+background:
+    var(--maroon-800);
+
+
+}
+
+/* ----------------------------------------------------------
+BEFORE YOU GO
+---------------------------------------------------------- */
+
+.before-you-go {
+
+
+max-width: 1050px;
+
+margin: 90px auto 0;
+
+padding: 60px 50px;
+
+border-radius: 22px;
+
+background:
+    linear-gradient(
+        135deg,
+        #faf5ec,
+        #fffdf9
+    );
+
+border:
+    1px solid rgba(104, 20, 34, 0.08);
+
+
+}
+
+.before-you-go-heading {
+
+
+max-width: 650px;
+
+margin-bottom: 38px;
+
+
+}
+
+.before-you-go-heading h2 {
+
+
+margin: 0 0 12px;
+
+font-family: var(--font-display);
+
+font-size: clamp(2rem, 4vw, 2.8rem);
+
+color: var(--maroon-900);
+
+
+}
+
+.before-you-go-heading p {
+
+
+margin: 0;
+
+color: var(--muted, #6f6861);
+
+line-height: 1.75;
+
+
+}
+
+/* ----------------------------------------------------------
+CHECKLIST
+---------------------------------------------------------- */
+
+.travel-checklist {
+
+
+display: grid;
+
+grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+gap: 15px;
+
+
+}
+
+.checklist-item {
+
+
+display: flex;
+
+align-items: center;
+
+gap: 13px;
+
+padding: 16px 18px;
+
+border-radius: 12px;
+
+background: #ffffff;
+
+border:
+    1px solid rgba(104, 20, 34, 0.07);
+
+color: var(--ink);
+
+font-size: 0.9rem;
+
+line-height: 1.5;
+
+
+}
+
+.check-icon {
+
+
+flex: 0 0 27px;
+
+width: 27px;
+height: 27px;
+
+display: grid;
+
+place-items: center;
+
+border-radius: 50%;
+
+background:
+    var(--maroon-800);
+
+color: #ffffff;
+
+font-size: 0.68rem;
+
+
+}
+
+/* ----------------------------------------------------------
+FOOTER ACTIVE LINK
+---------------------------------------------------------- */
+
+.footer-active {
+
+
+color:
+    var(--cream, #f7ecd8) !important;
+
+font-weight: 700;
+
+}
+
+/* ----------------------------------------------------------
+RESPONSIVE — TABLET
+---------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+
+.travel-tips-grid {
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+}
+
+
+.before-you-go {
+
+    padding: 45px 35px;
+
+}
+
+
+}
+
+/* ----------------------------------------------------------
+RESPONSIVE — MOBILE
+---------------------------------------------------------- */
+
+@media (max-width: 640px) {
+
+
+.travel-tips-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+
+}
+
+
+.travel-tip-card {
+
+    padding: 26px 23px;
+
+}
+
+
+.travel-tip-number {
+
+    top: 25px;
+
+    right: 23px;
+
+}
+
+
+.before-you-go {
+
+    margin-top: 65px;
+
+    padding: 35px 22px;
+
+    border-radius: 18px;
+
+}
+
+
+.travel-checklist {
+
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+}
+
+
+}
+
+/* ----------------------------------------------------------
+REDUCED MOTION
+---------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+
+.travel-tip-card {
+
+    transition: none;
+
+}
+
+
+}
+
+
+/* ==========================================================
+   UNO TOURS — TERMS & CONDITIONS
+========================================================== */
+
+
+/* ----------------------------------------------------------
+   TERMS HERO
+---------------------------------------------------------- */
+
+.terms-hero {
+    background:
+        linear-gradient(
+            135deg,
+            var(--maroon-900),
+            var(--maroon-800)
+        );
+}
+
+
+/* ----------------------------------------------------------
+   TERMS LAYOUT
+---------------------------------------------------------- */
+
+.terms-layout {
+    display: grid;
+
+    grid-template-columns: 230px 1fr;
+
+    gap: 55px;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+}
+
+
+/* ----------------------------------------------------------
+   SIDEBAR
+---------------------------------------------------------- */
+
+.terms-sidebar {
+    position: relative;
+}
+
+
+.terms-sidebar-inner {
+    position: sticky;
+
+    top: 110px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 24px 20px;
+
+    border-left:
+        2px solid rgba(104, 20, 34, 0.12);
+}
+
+
+.terms-sidebar .support-section-label {
+    margin-bottom: 12px;
+}
+
+
+.terms-sidebar a {
+    padding: 8px 0;
+
+    color: var(--muted, #6f6861);
+
+    font-size: 0.82rem;
+
+    line-height: 1.4;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+
+.terms-sidebar a:hover {
+    padding-left: 5px;
+
+    color: var(--maroon-800);
+}
+
+
+/* ----------------------------------------------------------
+   TERMS DOCUMENT
+---------------------------------------------------------- */
+
+.terms-document {
+    min-width: 0;
+
+    padding: 5px 0;
+}
+
+
+.terms-updated {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 40px;
+
+    padding: 8px 13px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(104, 20, 34, 0.07);
+
+    color: var(--maroon-800);
+
+    font-size: 0.76rem;
+
+    font-weight: 700;
+}
+
+
+/* ----------------------------------------------------------
+   TERMS SECTION
+---------------------------------------------------------- */
+
+.terms-section {
+    display: grid;
+
+    grid-template-columns: 45px 1fr;
+
+    gap: 20px;
+
+    padding-bottom: 45px;
+
+    margin-bottom: 45px;
+
+    border-bottom:
+        1px solid rgba(104, 20, 34, 0.10);
+}
+
+
+.terms-section:last-child {
+    margin-bottom: 0;
+
+    border-bottom: none;
+}
+
+
+.terms-number {
+    padding-top: 7px;
+
+    color: var(--maroon-800);
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    opacity: 0.65;
+}
+
+
+.terms-section h2 {
+    margin: 0 0 15px;
+
+    font-family: var(--font-display);
+
+    font-size: clamp(1.45rem, 3vw, 2rem);
+
+    line-height: 1.2;
+
+    color: var(--maroon-900);
+}
+
+
+.terms-section p {
+    margin: 0 0 15px;
+
+    color: var(--muted, #6f6861);
+
+    font-size: 0.94rem;
+
+    line-height: 1.85;
+}
+
+
+.terms-section p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ----------------------------------------------------------
+   TERMS LIST
+---------------------------------------------------------- */
+
+.terms-section ul {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin: 18px 0;
+
+    padding-left: 20px;
+
+    color: var(--muted, #6f6861);
+
+    font-size: 0.94rem;
+
+    line-height: 1.75;
+}
+
+
+.terms-section li::marker {
+    color: var(--maroon-800);
+}
+
+
+/* ----------------------------------------------------------
+   TERMS LINKS
+---------------------------------------------------------- */
+
+.terms-section a {
+    color: var(--maroon-800);
+
+    font-weight: 700;
+
+    text-decoration: underline;
+
+    text-underline-offset: 3px;
+}
+
+
+/* ----------------------------------------------------------
+   IMPORTANT NOTICE
+---------------------------------------------------------- */
+
+.terms-notice {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin-top: 25px;
+
+    padding: 18px 20px;
+
+    border-left:
+        3px solid var(--maroon-800);
+
+    border-radius: 8px;
+
+    background:
+        rgba(104, 20, 34, 0.055);
+}
+
+
+.terms-notice i {
+    flex: 0 0 auto;
+
+    margin-top: 4px;
+
+    color: var(--maroon-800);
+}
+
+
+.terms-notice p {
+    margin: 0;
+
+    font-size: 0.88rem;
+}
+
+
+/* ----------------------------------------------------------
+   CONTACT DETAILS
+---------------------------------------------------------- */
+
+.terms-contact {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+
+.terms-contact p {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin: 0;
+
+    padding: 11px 14px;
+
+    border-radius: 10px;
+
+    background: #faf5ec;
+
+    color: var(--maroon-900);
+
+    font-size: 0.82rem;
+
+    line-height: 1.4;
+}
+
+
+.terms-contact i {
+    color: var(--maroon-800);
+}
+
+
+/* ----------------------------------------------------------
+   TABLET
+---------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .terms-layout {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .terms-sidebar-inner {
+        position: static;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 3px 20px;
+
+        padding: 20px;
+
+        border-left: none;
+
+        border-bottom:
+            1px solid rgba(104, 20, 34, 0.12);
+
+        background: #faf5ec;
+
+        border-radius: 14px;
+    }
+
+
+    .terms-sidebar .support-section-label {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* ----------------------------------------------------------
+   MOBILE
+---------------------------------------------------------- */
+
+@media (max-width: 640px) {
+
+    .terms-sidebar-inner {
+        grid-template-columns: 1fr;
+    }
+
+
+    .terms-section {
+        grid-template-columns: 32px 1fr;
+
+        gap: 12px;
+
+        padding-bottom: 35px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .terms-number {
+        font-size: 0.66rem;
+    }
+
+
+    .terms-section h2 {
+        font-size: 1.45rem;
+    }
+
+
+    .terms-section p,
+    .terms-section ul {
+        font-size: 0.9rem;
+    }
+
+
+    .terms-notice {
+        padding: 15px;
+    }
+
+
+    .terms-contact {
+        flex-direction: column;
+    }
+
+
+    .terms-contact p {
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+}
+
+
+/* ==========================================================
+   UNO TOURS — PRIVACY POLICY
+========================================================== */
+
+.privacy-hero {
+    background:
+        linear-gradient(
+            135deg,
+            var(--maroon-900),
+            var(--maroon-800)
+        );
+}

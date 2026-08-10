@@ -1,95 +1,898 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 <title>Travel Tips | Uno Tours</title>
-<script src="https://kit.fontawesome.com/8782f58de9.js" crossorigin="anonymous"></script>
+
+<!-- Font Awesome -->
+<script
+    src="https://kit.fontawesome.com/8782f58de9.js"
+    crossorigin="anonymous">
+</script>
+
+<!-- Main Website CSS -->
 <link rel="stylesheet" href="../src/style.css">
+
+<!-- Help & Support CSS -->
+<link rel="stylesheet" href="../src/help&support.css">
+
+
 </head>
+
 <body>
 
+
+<!-- =========================================================
+     HEADER
+========================================================== -->
+
 <header class="site-header">
-  <div class="nav-wrap">
-    <a href="../index.html" class="logo">
-      <div class="logo-badge">
-        <svg viewBox="0 0 24 24" class="logo-icon"><img src="../images/WhatsApp Image 2026-07-07 at 12.04.15 PM.jpeg" alt=""></svg>
-      </div>
-      <div class="logo-text">
-        <span class="logo-title">UNO TOURS</span>
-        <span class="logo-tag">Travel. Explore. Live.</span>
-      </div>
-    </a>
-    <nav class="main-nav">
-      <a href="../index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="destination.html">Destination</a>
-      <a href="tours.html">Tours</a>
-      <a href="contact.html">Contact</a>
-      <a href="login.html" class="nav-login">Login</a>
-      <a href="signup.html" class="nav-signup">Sign Up</a>
-    </nav>
-  </div>
+
+    <div class="nav-wrap">
+
+        <!-- LOGO -->
+
+        <a href="../index.html" class="logo">
+
+            <div class="logo-badge">
+
+                <img
+                    src="../images/WhatsApp Image 2026-07-07 at 12.04.15 PM.jpeg"
+                    alt="Uno Tours logo">
+
+            </div>
+
+            <div class="logo-text">
+
+                <span class="logo-title">
+                    UNO TOURS
+                </span>
+
+                <span class="logo-tag">
+                    Travel. Explore. Live.
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="nav-toggle"
+            id="navToggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <nav
+            class="main-nav"
+            id="mainNav">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="destination.html">
+                Destination
+            </a>
+
+            <a href="tours.html">
+                Tours
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a
+                href="login.html"
+                class="nav-login">
+
+                Login
+
+            </a>
+
+            <a
+                href="signup.html"
+                class="nav-signup">
+
+                Sign Up
+
+            </a>
+
+        </nav>
+
+    </div>
+
 </header>
 
-<main style="max-width:900px; margin:0 auto; padding:60px 20px; color:var(--ink);">
-  <h1 style="font-family:var(--font-display); color:var(--maroon-900); margin-bottom:24px;">Travel Tips</h1>
 
-  <div style="margin-bottom:20px;">
-    <h3 style="color:var(--maroon-800); margin-bottom:6px;">Pack light, pack smart</h3>
-    <p>Roll clothes instead of folding to save space, and always carry one change of clothes in your hand luggage.</p>
-  </div>
 
-  <div style="margin-bottom:20px;">
-    <h3 style="color:var(--maroon-800); margin-bottom:6px;">Check entry requirements early</h3>
-    <p>Visa rules and passport validity requirements vary by destination — confirm these at least a month before departure.</p>
-  </div>
+<!-- =========================================================
+     TRAVEL TIPS HERO
+========================================================== -->
 
-  <div style="margin-bottom:20px;">
-    <h3 style="color:var(--maroon-800); margin-bottom:6px;">Keep copies of important documents</h3>
-    <p>Store digital and physical copies of your passport, itinerary, and travel insurance separately from the originals.</p>
-  </div>
+<section class="support-hero travel-tips-hero">
 
-  <div style="margin-bottom:20px;">
-    <h3 style="color:var(--maroon-800); margin-bottom:6px;">Learn a few local phrases</h3>
-    <p>Simple greetings and "thank you" in the local language go a long way toward a warmer travel experience.</p>
-  </div>
+    <div class="support-hero-overlay"></div>
+
+    <div class="support-hero-content">
+
+        <span class="support-eyebrow">
+
+            <i class="fa-solid fa-compass"></i>
+
+            HELP &amp; SUPPORT
+
+        </span>
+
+
+        <h1>
+
+            Travel Smarter.
+            <span>Travel Better.</span>
+
+        </h1>
+
+
+        <p>
+
+            Simple travel tips to help you prepare,
+            explore confidently and make the most
+            of every Uno Tours experience.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MAIN CONTENT
+========================================================== -->
+
+<main class="support-page">
+
+
+    <!-- INTRO -->
+
+    <section class="travel-intro">
+
+        <span class="support-section-label">
+            YOUR JOURNEY STARTS HERE
+        </span>
+
+        <h2>
+            A little preparation goes a long way.
+        </h2>
+
+        <p>
+
+            Whether you're traveling for the first time
+            or you're an experienced explorer, being
+            prepared can make your journey smoother,
+            safer and more enjoyable.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TRAVEL TIP CARDS
+    ====================================================== -->
+
+    <section class="travel-tips-grid">
+
+
+        <!-- CARD 1 -->
+
+        <article class="travel-tip-card">
+
+            <div class="travel-tip-icon">
+
+                <i class="fa-solid fa-passport"></i>
+
+            </div>
+
+
+            <span class="travel-tip-number">
+                01
+            </span>
+
+
+            <h3>
+                Travel Documents
+            </h3>
+
+
+            <p>
+
+                Keep your passport, visa,
+                identification and booking
+                documents safe and easily
+                accessible throughout your trip.
+
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Check passport validity.
+                </li>
+
+                <li>
+                    Confirm visa requirements.
+                </li>
+
+                <li>
+                    Keep digital copies of important documents.
+                </li>
+
+            </ul>
+
+        </article>
+
+
+
+        <!-- CARD 2 -->
+
+        <article class="travel-tip-card">
+
+            <div class="travel-tip-icon">
+
+                <i class="fa-solid fa-suitcase-rolling"></i>
+
+            </div>
+
+
+            <span class="travel-tip-number">
+                02
+            </span>
+
+
+            <h3>
+                Pack Smart
+            </h3>
+
+
+            <p>
+
+                Pack according to your destination,
+                activities and expected weather.
+                Avoid carrying things you won't need.
+
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Check the weather before packing.
+                </li>
+
+                <li>
+                    Carry versatile clothing.
+                </li>
+
+                <li>
+                    Keep essentials in your hand luggage.
+                </li>
+
+            </ul>
+
+        </article>
+
+
+
+        <!-- CARD 3 -->
+
+        <article class="travel-tip-card">
+
+            <div class="travel-tip-icon">
+
+                <i class="fa-solid fa-wallet"></i>
+
+            </div>
+
+
+            <span class="travel-tip-number">
+                03
+            </span>
+
+
+            <h3>
+                Money &amp; Payments
+            </h3>
+
+
+            <p>
+
+                Plan how you'll access money while
+                traveling and familiarize yourself
+                with the local currency.
+
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Carry a small amount of local currency.
+                </li>
+
+                <li>
+                    Notify your bank before international travel.
+                </li>
+
+                <li>
+                    Keep payment cards secure.
+                </li>
+
+            </ul>
+
+        </article>
+
+
+
+        <!-- CARD 4 -->
+
+        <article class="travel-tip-card">
+
+            <div class="travel-tip-icon">
+
+                <i class="fa-solid fa-wifi"></i>
+
+            </div>
+
+
+            <span class="travel-tip-number">
+                04
+            </span>
+
+
+            <h3>
+                Stay Connected
+            </h3>
+
+
+            <p>
+
+                Make sure you can communicate and
+                access important information while
+                you're away.
+
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Check international roaming options.
+                </li>
+
+                <li>
+                    Consider a local SIM or eSIM.
+                </li>
+
+                <li>
+                    Save important contact numbers offline.
+                </li>
+
+            </ul>
+
+        </article>
+
+
+
+        <!-- CARD 5 -->
+
+        <article class="travel-tip-card">
+
+            <div class="travel-tip-icon">
+
+                <i class="fa-solid fa-earth-africa"></i>
+
+            </div>
+
+
+            <span class="travel-tip-number">
+                05
+            </span>
+
+
+            <h3>
+                Respect Local Culture
+            </h3>
+
+
+            <p>
+
+                Every destination has its own traditions,
+                customs and ways of life. Learn about them
+                before you arrive.
+
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Learn basic local customs.
+                </li>
+
+                <li>
+                    Dress appropriately for cultural sites.
+                </li>
+
+                <li>
+                    Ask before photographing people.
+                </li>
+
+            </ul>
+
+        </article>
+
+
+
+        <!-- CARD 6 -->
+
+        <article class="travel-tip-card">
+
+            <div class="travel-tip-icon">
+
+                <i class="fa-solid fa-shield-heart"></i>
+
+            </div>
+
+
+            <span class="travel-tip-number">
+                06
+            </span>
+
+
+            <h3>
+                Stay Safe
+            </h3>
+
+
+            <p>
+
+                Stay aware of your surroundings and
+                take sensible precautions wherever
+                your journey takes you.
+
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Keep valuables secure.
+                </li>
+
+                <li>
+                    Stay aware of your surroundings.
+                </li>
+
+                <li>
+                    Follow local safety guidance.
+                </li>
+
+            </ul>
+
+        </article>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BEFORE YOU GO
+    ====================================================== -->
+
+    <section class="before-you-go">
+
+        <div class="before-you-go-heading">
+
+            <span class="support-section-label">
+                BEFORE YOU GO
+            </span>
+
+            <h2>
+                Your pre-travel checklist.
+            </h2>
+
+            <p>
+
+                Take a few minutes before departure
+                to make sure the essentials are covered.
+
+            </p>
+
+        </div>
+
+
+        <div class="travel-checklist">
+
+
+            <div class="checklist-item">
+
+                <span class="check-icon">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </span>
+
+                <span>
+                    Confirm your booking details.
+                </span>
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <span class="check-icon">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </span>
+
+                <span>
+                    Check your passport and travel documents.
+                </span>
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <span class="check-icon">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </span>
+
+                <span>
+                    Check the weather at your destination.
+                </span>
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <span class="check-icon">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </span>
+
+                <span>
+                    Prepare medications and personal essentials.
+                </span>
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <span class="check-icon">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </span>
+
+                <span>
+                    Inform someone you trust about your itinerary.
+                </span>
+
+            </div>
+
+
+            <div class="checklist-item">
+
+                <span class="check-icon">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </span>
+
+                <span>
+                    Save important contacts and booking information.
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SUPPORT CTA
+    ====================================================== -->
+
+    <section class="support-cta">
+
+        <div class="support-cta-icon">
+
+            <i class="fa-solid fa-headset"></i>
+
+        </div>
+
+
+        <div class="support-cta-content">
+
+            <span>
+                STILL NEED HELP?
+            </span>
+
+            <h2>
+                We're here for your journey.
+            </h2>
+
+            <p>
+
+                Have questions about your trip,
+                destination or booking?
+
+                Our team is ready to help.
+
+            </p>
+
+        </div>
+
+
+        <a
+            href="contact.html"
+            class="support-cta-button">
+
+            Contact Us
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </section>
+
 </main>
 
-<footer class="site-footer">
-  <div class="footer-media">
-    <img src="https://images.unsplash.com/photo-1509266272358-7701da638078?auto=format&fit=crop&w=1600&q=80" alt="">
-    <div class="footer-overlay"></div>
-  </div>
-  <div class="footer-content">
-    <div class="footer-col footer-brand">
-      <p class="footer-name">UNO TOURS</p>
-      <p class="footer-slogan">Travel. Explore. Live.</p>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================== -->
+
+<footer class="site-footer9" id="contact">
+
+    <div class="footer-media">
+
+        <div class="footer-overlay"></div>
+
     </div>
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <a href="../index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="destination.html">Destination</a>
-      <a href="tours.html">Travel Packages</a>
+
+
+    <div class="footer-content">
+
+
+        <!-- BRAND -->
+        <div class="footer-col footer-brand">
+
+            <div class="logo-badge footer-badge">
+
+                <img
+                    src="../images/WhatsApp Image 2026-07-07 at 12.04.15 PM.jpeg"
+                    alt="Uno Tours logo">
+
+            </div>
+
+            <p class="footer-name">
+                UNO TOURS
+            </p>
+
+            <p class="footer-slogan">
+                Travel. Explore. Live.
+            </p>
+
+            <p class="footer-blurb">
+                We create journeys that inspire, connect
+                and leave you with memories that last a
+                lifetime.
+            </p>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+        <div class="footer-col">
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="destination.html">
+                Destination
+            </a>
+
+            <a href="tours.html">
+                Travel Packages
+            </a>
+
+        </div>
+
+
+        <!-- HELP & SUPPORT -->
+        <div class="footer-col">
+
+            <h4>
+                Help &amp; Support
+            </h4>
+
+            <a
+                href="faqs.html"
+                class="footer-active">
+                FAQs
+            </a>
+
+            <a href="traveltip.html">
+                Travel Tips
+            </a>
+
+            <a href="terms.html">
+                Terms &amp; Conditions
+            </a>
+
+            <a href="policy.html">
+                Privacy Policy
+            </a>
+
+        </div>
+
+
+        <!-- CONTACT -->
+        <div class="footer-col">
+
+            <h4>
+                Contact Us
+            </h4>
+
+            <p class="contact-line">
+
+                <i class="fa-solid fa-phone"></i>
+
+                <a href="tel:+233554327999">
+                    +233 554 327 999
+                </a>
+
+                <br>
+
+                <a href="tel:+233205447664">
+                    +233 205 447 664
+                </a>
+
+            </p>
+
+
+            <p class="contact-line">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <a href="mailto:unotours1@gmail.com">
+                    unotours1@gmail.com
+                </a>
+
+            </p>
+
+
+            <p class="contact-line">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                123 Adventure Lane
+                <br>
+                Accra, Ghana
+
+            </p>
+
+        </div>
+
     </div>
-    <div class="footer-col">
-      <h4>Help & Support</h4>
-      <a href="faqs.html">FAQs</a>
-      <a href="traveltip.html">Travel Tip</a>
-      <a href="terms.html">Terms & Conditions</a>
-      <a href="policy.html">Privacy Policy</a>
+
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+
+        <p>
+            <i class="fa-regular fa-copyright"></i>
+            2026 Uno Tours. All Rights Reserved.
+        </p>
+
+
+        <div class="footer-social">
+
+            <span>
+                Follow Us
+            </span>
+
+            <a
+                href="https://www.facebook.com/"
+                aria-label="Facebook">
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+            <a
+                href="https://www.instagram.com/"
+                aria-label="Instagram">
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+            <a
+                href="https://x.com/"
+                aria-label="X">
+
+                <i class="fa-brands fa-x-twitter"></i>
+
+            </a>
+
+            <a
+                href="https://www.tiktok.com/"
+                aria-label="TikTok">
+
+                <i class="fa-brands fa-tiktok"></i>
+
+            </a>
+
+        </div>
+
     </div>
-    <div class="footer-col">
-      <h4>Contact Us</h4>
-      <p class="contact-line"><i class="fa-solid fa-phone"></i>  +233 554 327 999<br>+233 205 447 664</p>
-      <p class="contact-line"><i class="fa-solid fa-envelope"></i> unotours1@gmail.com</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 Uno Tours All Rights Reserved</p>
-  </div>
+
 </footer>
 
+
+<!-- MAIN JAVASCRIPT -->
+
+<script src="../src/script.js"></script>
+```
+
 </body>
+
 </html>
