@@ -1722,7 +1722,7 @@ opacity:0;
   display: inline-block;
   padding: 4px 12px;
   border-radius: 6px;
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 10px;
   -webkit-text-stroke: 3px var(--maroon-900);
 }
@@ -1758,7 +1758,7 @@ opacity:0;
 }
 .page-title7 {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: rgb 119, 66, 38;
   text-shadow: 2px 2px 0 rgba(44,17,9,0.25);
@@ -1791,7 +1791,7 @@ opacity:0;
 
 .page-sub7 {
   max-width: 620px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1.6;
 background: rgb(105, 129, 87);
   color: white;
@@ -1874,10 +1874,10 @@ margin-top: 150px;
   font-style: italic;
   color: var(--maroon-900);
   margin-bottom: 12px;
-  font-size: 3rem;
+  font-size: 1.8rem;
 }
 .who-we-are-text p {
-  font-size: 2rem;
+  font-size: 1rem;
   line-height: 1.7;
   font-weight: 600;
   color: var(--ink);
@@ -1900,12 +1900,12 @@ margin-top: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 6rem;
+  font-size: 2.8rem;
   color: var(--maroon-900);
   margin: 0 auto 14px;
 }
 .pillar h3.pill-label { display: inline-block; }
-.pillar p { font-size: 2rem; font-weight: 600; line-height: 1.5; color: var(--ink); }
+.pillar p { font-size: 0.9rem; font-weight: 600; line-height: 1.5; color: var(--ink); }
 
 .stats-band {
   display: grid;
@@ -1926,7 +1926,7 @@ margin-top: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-   font-size: 10rem;
+   font-size: 4rem;
   color: var(--maroon-900);
   margin: 0 auto 8px;
 }
@@ -1934,9 +1934,9 @@ margin-top: 150px;
   font-family: var(--font-display);
   font-weight: 800;
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
 }
-.stat-caption { font-size: 2rem; font-weight: 600; color: var(--ink); }
+.stat-caption { font-size: 0.9rem; font-weight: 600; color: var(--ink); }
 .stats-center { text-align: center; }
 .stats-center .center-badge { width: 300px; height: 300px; margin: 0 auto; }
 .stats-center .center-title { color: var(--maroon-950); }
